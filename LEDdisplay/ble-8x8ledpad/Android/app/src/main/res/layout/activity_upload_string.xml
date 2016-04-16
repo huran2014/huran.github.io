@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+/*
+ * Copyright (C) 2015 Iasc CHEN
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <TextView android:id="@+id/connection_state"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/disconnected"
+              android:textSize="18sp"
+              android:layout_alignParentLeft="true"
+              android:textStyle="italic"/>
+    <TextView android:id="@+id/isSerial"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/is_serial"
+              android:textSize="18sp"
+              android:layout_alignParentRight="true"
+              android:textStyle="italic"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/editMessage" android:layout_below="@+id/connection_state" android:lines="3"
+            android:text="Welcome to Microduino!"/>
+
+    <!--Color-->
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_below="@+id/editMessage"
+            android:layout_marginTop="10dp"
+            android:id="@+id/radioGroupColor"
+            android:layout_alignStart="@+id/editMessage" android:orientation="horizontal"
+            android:gravity="center_horizontal">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonRed"
+                android:background="#ffff0000" android:checked="true"/>
+
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonYellow" android:layout_marginLeft="60dp"
+                android:background="#ffffff00"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonGreen"
+                android:background="#ff00ff00" android:layout_marginLeft="60dp"/>
+    </RadioGroup>
+
+    <!--Direction-->
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_below="@+id/radioGroupColor"
+            android:layout_marginTop="10dp"
+            android:id="@+id/radioGroupDirection"
+            android:layout_alignStart="@+id/radioGroupColor" android:orientation="horizontal"
+            android:gravity="center_horizontal">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonLeft"
+                android:text="⬅️" android:checked="true"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonUp" android:layout_marginLeft="20dp"
+                android:text="⬆️"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonRight"  android:layout_marginLeft="20dp"
+                android:text="➡️"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rButtonDown"  android:layout_marginLeft="20dp"
+                android:text="⬇️"/>
+    </RadioGroup>
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendButton"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="@string/menu_upload"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" android:enabled="false"
+            android:layout_below="@+id/radioGroupDirection" android:layout_centerHorizontal="true"/>
+
+    <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/infoImage"-->
+            <!--android:background="@drawable/gu_info"-->
+            <!--android:layout_alignBottom="@+id/sendButton" android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentStart="false"/>-->
+
+</RelativeLayout>

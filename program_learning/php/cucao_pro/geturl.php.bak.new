@@ -1,0 +1,479 @@
+<?php
+   	include_once "simple_html_dom.php";
+
+/* ÏÔÊ¾µ±Ç°µÄÄÚ²¿×Ö·û±àÂë*/
+   //echo mb_internal_encoding();
+	function dealTime($time)
+	{
+		$minite=0;
+		$minite=$minite*10+($time[0]-'0');
+		$minite=$minite*10+($time[1]-'0');
+		$second=0;
+		$second=$second*10+($time[3]-'0');
+		$second=$second*10+($time[4]-'0');
+		return $minite*60+$second;
+	}
+   
+   	function getDurl($url)
+   	{
+        $html0 = file_get_html($url);
+	    $cnt=0;
+	    $allcnt=0;
+	    while ($html0 == false)
+	    {
+	      	if ($cnt == 5)
+		  	{
+		     	$allcnt++;
+			 	if ($allcnt == 2)
+			    	return false;
+		     	sleep(1);
+			 	$cnt=0;
+		  	}
+		  	$html0 = file_get_html($url);
+		  	$cnt++;
+	    }
+		
+	    $urlqueue=array();
+	    $e = $html0->find('div[class=listmenu]',0);
+        $urlqueue[0][0][0]='http://epg.tvsou.com'.$e->find('a', 0)->href;
+		$p_names = $html0->find('div[class=listmenu2]',0)->plaintext;
+		$true_name = explode("\n", $p_names);
+		$urlqueue[0][0][1]=$true_name[0];
+		// print_r($urlqueue);
+	    if (preg_match('/CCTV/', $urlqueue[0][0][1])) 
+	    {
+			$Emptyurl=0;
+		    for ($i=0; $i < count($urlqueue); $i++)
+		    {
+		       	$html01 = file_get_html($urlqueue[$i][0][0]);
+			   	if ($html01 == false)
+			   	{
+			      	$Emptyurl++;
+			      	continue;
+			   	}
+			   	foreach($html01->find('div[class=listmenu2]') as $e1)
+		       	{
+			       	foreach($e1->find('a') as $d1)
+				   	{
+			           	$h='http://epg.tvsou.com'.$d1->href;
+				       	$con=$d1->plaintext;
+					   	$length=count($urlqueue[$i]);
+					   	$urlqueue[$i-$Emptyurl][$length][0]=$h;
+					   	$urlqueue[$i-$Emptyurl][$length][1]=$con;
+				   	}
+		       	}
+		    }
+		}
+		return $urlqueue;
+   	}
+   
+   	function getSurl($url)
+   	{
+       
+       	$html0 = file_get_html($url);
+	   	$cnt=0;
+	   	$allcnt=0;
+	    while ($html0 == false)
+	    {
+	      	if ($cnt == 5)
+		  	{
+		     	$allcnt++;
+			 	if ($allcnt == 2)
+			    	return false;
+		     	sleep(1);
+			 	$cnt=0;
+		  	}
+		  	$html0 = file_get_html($url);
+		  	$cnt++;
+	    }
+
+       	$sheng=array();
+       	foreach($html0->find('div[class="clear pd10 mb10 bd_gray bg_deep_gray"]') as $e)
+	   	{
+			print "ok!\n";
+		   	$i=0;
+		   	foreach($e->find('a') as $d)
+		   	{
+				// print "i="+$i+"\n";
+		        $i++;
+		        if ($i <= 34)
+			    {
+		           $sheng[$i-1][0]=$d->href;
+					if ($i == 32)
+					{
+					    $sheng[$i-1][0]="http://www.tvsou.com/program/TV_33/Channel_55/W2.htm";
+					}
+				       $sheng[$i-1][1]=$d->plaintext;
+			    }
+				else
+				   break;
+				   
+		    }   
+			break;
+	    }
+        return $sheng;
+    }
+   
+////////////////////////////////////////////////////////////////////////////////////////////////////
+    function getContent($url,$channel,$Gnum,$p_area)
+	{
+	    $html = file_get_html($url);
+	    $cnt=0;
+	    $allcnt=0;
+        while ($html == false)
+        {
+        	if ($cnt == 5)
+	    	{
+		        $allcnt++;
+			    if ($allcnt == 2)
+			    	return false;
+		        sleep(1);
+			    $cnt=0;
+		    }
+		    $html = file_get_html($url);
+		    $cnt++;
+        }
+	   
+	    $str=$html->find('dd[class="rt"]',0)->plaintext;
+	    $base=explode(" ",$str);
+	    $base[6]=preg_replace("/(\s|\&nbsp\;|¡¡|\xc2\xa0)/","",$base[6]);
+	    print_r($base[6]);
+	    print "\n";
+	    print_r($base[7]);
+	    print "\n";
+
+	    //获取节目图标
+	    $p_image=$html->find('div[id="TvChannelDIV"]','img')->href;
+	   
+	    // //获取节目地区
+	    // $p_area=$html->find('div[id="TvChannelDIV"]','img')->href;
+
+	    $p_num=0;
+	    $program=array();
+	    $aas=array();
+	    $last_time=null;
+	    #foreach($html->find('div[id=PMT1], div[id=PMT2]') as $e)
+	    foreach($html->find('div[class="tvgenre clear"]') as $e)//¿¿¿¿¿¿
+	    {
+		  	foreach($e->find('li') as $c)//节目列表
+            {
+			  	$program[$p_num]['duration']=null;
+			  	$program[$p_num]['time']=null;
+			  	$program[$p_num]['name']=null;
+			  	$program[$p_num]['content']=null;
+			  	$program[$p_num]['url']=null;
+			  	$program[$p_num]['infourl']=null;
+			  	$program[$p_num]['type']=null;
+			  	$program[$p_num]['host']=null;
+			  	$program[$p_num]['actor']=null;
+			  	$program[$p_num]['abs']=null;
+			  	$program[$p_num]['flag']=0;
+			  	$program[$p_num]['area']=$p_area;
+			  	$program[$p_num]['image']=null;
+		  		//¿¿¿¿¿¿¿¿¿¿¿¿
+		      	if($c->find('span',0) != null)              //节目时间
+                {
+			  		$c_time = $c->find('span',0);
+                    $program[$p_num]['time']=$c_time->plaintext;
+                    if ($p_num > 0)
+			      		$program[$p_num-1]['duration']=dealTime($program[$p_num]['time'])-dealTime($program[$p_num-1]['time']);
+                    $last_time=$program[$p_num]['time'];
+                }
+                if ($c->find('a', 0) != null)//节目具体内容
+              	{
+                  	if(isset($c->find('a', 0)->href))//¿¿¿¿¿¿url¿¿
+                  	{
+                      	$program[$p_num]['infourl']=$c->find('a', 0)->href;//节目链接
+      					$program[$p_num]['name']=$c->find('a', 0)->plaintext;//节目名称
+                  	}
+              	}
+              	//如果没有爬取到节目名称和链接，尝试看看是否本身这个是没有链接的节目
+              	if ($program[$p_num]['infourl'] == null && $program[$p_num]['name'] == null )
+              	{
+              		if(isset($c->plaintext) && isset($c->find('span',0)->plaintext))
+              		{
+      					$li_text=$c->plaintext;//节目名称
+      					$p_name=explode(" ",$li_text);
+      					$program[$p_num]['name'] = $p_name[1];
+              		}
+              	}
+				if ($c->find('div[class=border1px]',0) != null)//爬取节目详细内容
+				{
+					$program[$p_num]['content']=$c->find('div[class=border1px]',0)->plaintext;
+					$program[$p_num]['abs']='program';
+				}
+              	//如果节目并没有剧情概述，就把节目链接赋给节目url   		
+			  	for ($i=0; $i < count($program); $i++)
+			  	{
+				  	if ($program[$i]['content'] == null)
+					 	$program[$i]['url']=$program[$i]['infourl'];
+			  	}	
+			  	//检查是否爬取到节目名称和链接，没有的话说明爬取出错，跳过这个节目
+			  	if ($program[$p_num]['name'] != null )
+			  		$p_num++;
+			}
+	    }
+        ///////////////////////////////////////循环计算节目时长//////////////////////////////////////////////
+        //因为这里是只爬取了一天的电视节目，所以不用循环计算时间
+		#$program[$p_num-1]['duration']=dealTime($program[0]['time'])+24*60-dealTime($last_time);
+
+		//深入挖掘电视节目信息		   
+	   	for ($i =0; $i < count($program); $i++)
+	   	{
+	   		print "$i: ";
+	   		//检查url是否有效
+	   		$headers=@get_headers($program[$i]['url']);//抓取HTTP Header information 
+			if(strpos($headers[0],'404')===true)//检查看看有没有404啊 
+	   			continue;
+	   		//如果节目没有剧情概要并且有节目链接的话，就进入页面爬取进一步的信息
+		  	if ($program[$i]['content'] == null && isset($program[$i]['url']))
+		  	{
+		   		print $program[$i]['name'];
+		   		// print "\n";
+				print $program[$i]['url'];
+				print "\n";
+			 	$html2 = file_get_html($program[$i]['url']);//爬取该节目的网页
+			 	if ($html2 == null) 
+			 	{
+			 		continue;
+			 	}
+			 	//爬取节目图标
+			 	$t_image0=$html2->find('div[class="rtive lt dsj_wp"]',0);
+			 	// print("t_image0 = $t_image0\n");
+			 	$t_image1=$t_image0->find('a',0);
+			 	// print("t_image1 = $t_image1\n");
+			 	$program[$i]['image']=$t_image1->find('img',0)->src;
+			 	print "节目图标链接是：".$program[$i]['image']."\n";
+
+			 	//爬取节目内容
+				if(isset($html2->find('p[class="mt20 clear mb15 lh20"]',0)->plaintext))//爬取节目内容信息
+				{
+					$b= $html2->find('p[class="mt20 clear mb15 lh20"]',0);
+					$program[$i]['content']= $b->plaintext;//$b->plaintext;
+				}
+				foreach($html2->find('div[class="ml10 dsj_right rt mb15"]') as $c)//爬取栏目信息
+				{
+					preg_match_all("/(?:\()(.*)(?:\))/i",$c->find('span',0)->plaintext, $p_type); //爬取节目类型信息
+					$program[$i]['type']=$p_type[1][0];
+					print $program[$i]['type'];
+					print "\n";
+					//利用正则表达式判断这是社会频道还是影视频道（根据是否有主持人来判断）
+					if(preg_match("/主持人：(.*)/",$c->find('p',0)->plaintext))
+						$program[$i]['flag'] = 0;//这是社会频道
+					else
+						$program[$i]['flag'] = 1;//这是影视频道
+
+			 		////////////////////////////////获取电视节目链接下的信息//////////////////////////////////////////////////////////
+					if($program[$i]['flag'] == 0)
+					{
+						//利用正则表达式匹配获取主持人信息
+						$p_info = $c->find('p',0)->plaintext;
+						preg_match_all("/主持人：(.*)/",$p_info, $p_host);
+						$program[$i]['host']=$p_host[1][0];//爬取主持人信息
+						preg_match_all("/类别：(.*)/",$p_info, $p_abs);
+						if(!preg_match("/类别：(.*)/",$c->find('p',0)->plaintext))
+						{
+							print "没有爬到类别名称\n";
+							$p_abs1 = "类别:".$program[$i]['type'];
+							$program[$i]['abs']=$p_abs1;
+						}
+						else
+							$program[$i]['abs']=$p_abs[0][0];
+						print $program[$i]['host'];
+						print "\n";
+						print $program[$i]['abs'];
+						print "\n";
+					}
+					////////////////////////////////获取剧情链接下的信息//////////////////////////////////////////////////////////
+					else
+					{
+						// //根据节目名称，获取到节目集数，从而获取到相应的剧集信息。
+						// preg_match("/\s[0-9]\d/", $program[$i]['name'], $m_num);
+						// //获取分集剧情列表
+						// if($html2->find('ul[id="p1_12"]',0))
+						// {
+						// 	$lis=$html2->find('ul[id="p1_12"]',0);
+						// 	// print $lis->find('li',0);
+						// 	foreach($lis->find('li') as $li_i) 
+						// 	{
+						// 		// preg_match("/[0-9]\d/", $li_i->plaintext, $tv_num);
+						// 		// print "\n\n*************************start**********************************\n\n";
+						// 		// print_r($m_num);
+						// 		// print $li_i;
+						// 		preg_match("/(.*)\d/", $li_i->plaintext, $tv_nums);
+						// 		$tv_num=explode("-", $tv_nums[0]);
+						// 		// print_r($tv_num);
+						// 		// print "\n\n**************************end***********************************\n\n";
+						// 		if($tv_num[0]<=$m_num[0] && $tv_num[1]>=$m_num[0] && isset($m_num[0]))
+						// 		{
+						// 			$p=file_get_html("www.tvsou.com/".$li_i->href);//进入到具体的剧情介绍
+						// 			$p_content=$p->find('div[class="sec_wp clear"]');
+						// 			//遍历每集剧集名介绍
+						// 			$p_count=0;
+						// 			// print "\np_content=$p_content\n";
+						// 			foreach ($p_content->find('h2[id="a1"]') as $key) 
+						// 			{
+						// 				if(preg_match($m_num, $key->find('span',0)->plaintext))
+						// 				{
+						// 					//找到相应的剧情介绍
+						// 					foreach ($p_content->find('p') as $key1) 
+						// 					{
+						// 						//获取到相应的剧情
+						// 						for (; $p_count>=0; $p_count--) { 
+						// 							if ($p_count==0)
+						// 								$program[$i]['content']= $key1->plaintext;
+						// 							print($program[$i]['content']);
+						// 						}
+						// 						break;
+						// 					}
+						// 				}
+						// 				$p_count++;
+						// 			}
+						// 		}
+						// 	}
+						// }
+
+					    $p_info = $c->find('p',0)->plaintext;
+						preg_match_all("/导演：(.*)/",$p_info, $p_host);
+						preg_match_all("/主演：(.*)/",$p_info, $p_actor);
+						$program[$i]['host']=$p_actor[1][0];//爬取演员信息
+						preg_match_all("/类别：(.*)/",$p_info, $p_abs);//节目类别信息，如：类别：剧情
+						if(!preg_match("/类别：(.*)/",$c->find('p',0)->plaintext))
+						{
+							print "没有爬到类别名称\n";
+							$p_abs1 = "类别:".$program[$i]['type'];
+							$program[$i]['abs']=$p_abs1;
+						}
+						else
+							$program[$i]['abs']=$p_abs[0][0];
+						print $program[$i]['host'];
+						print "\n";
+						print $program[$i]['abs'];
+						print "\n";
+					}
+				}
+			}
+	   		//如果节目有剧情概要并且有节目链接的话，就进入页面爬取进一步的信息
+			elseif (isset($program[$i]['infourl']))
+			{
+		   		print $program[$i]['name'];
+				print $program[$i]['infourl'];
+		   		print "\n";
+				$html2 = file_get_html($program[$i]['infourl']);//爬取该节目的网页
+
+			 	//爬取节目图标
+			 	$t_image0=$html2->find('div[class="rtive lt dsj_wp"]',0);
+			 	$t_image1=$t_image0->find('a',0);
+			 	$program[$i]['image']=$t_image1->find('img',0)->src;
+			 	print "节目图标链接是：".$program[$i]['image'];
+
+				//爬取详细内容
+				foreach($html2->find('div[class="ml10 dsj_right rt mb15"]') as $c)//爬取栏目信息
+				{
+					preg_match_all("/(?:\()(.*)(?:\))/i",$c->find('span',0)->plaintext, $p_type); //爬取节目类型信息
+					$program[$i]['type']=$p_type[1][0];
+					print $program[$i]['type'];
+					print "\n";
+
+					////////////////////////////////获取剧情链接下的信息//////////////////////////////////////////////////////////
+				    $p_info = $c->find('p',0)->plaintext;
+					preg_match_all("/导演：(.*)/",$p_info, $p_host);
+					preg_match_all("/主演：(.*)/",$p_info, $p_actor);
+					$program[$i]['host']=$p_actor[1][0];//爬取演员信息
+					preg_match_all("/类别：(.*)/",$p_info, $p_abs);//节目类别信息，如：类别：剧情
+					if(!preg_match("/类别：(.*)/",$c->find('p',0)->plaintext))
+					{
+						$p_abs1 = "类别:".$program[$i]['type'];
+						$program[$i]['abs']=$p_abs1;
+					}
+					else
+						$program[$i]['abs']=$p_abs[0][0];
+					print $program[$i]['host'];
+					print "\n";
+					print $program[$i]['abs'];
+					print "\n";
+				}
+			}
+		}
+		   
+//////////////////////////////////////////////////////////////////////////////////////////////////////////		   
+		$id=MySql_connect("localhost","root","12345");
+		$ok=MySql_select_db("mystudy",$id);
+		mysql_query("set names gb2312");
+
+		$channel=iconv('UTF-8','GB2312//IGNORE', $channel);
+		$channel="'".$channel."'";
+		// $channel=$channel;
+		$base[6]=iconv('UTF-8','GB2312//IGNORE', $base[6]);
+		$base[7]=iconv('UTF-8','GB2312//IGNORE', $base[7]);
+		$date="'".$base[6]."'";
+		$day="'".$base[7]."'";
+		// $date=$base[6];
+		// $day=$base[7];
+		for ($i=0; $i < count($program); $i++)
+		{
+			$program[$i]['time']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['time']);
+			$program[$i]['name']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['name']);
+			if(isset($program[$i]['content']))
+			{
+				//内容去除错误引号标记，将英文格式的引号改成中文格式的引号
+				preg_replace("\"", "“", $program[$i]['content']);	  
+				$program[$i]['content']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['content']);
+			}
+			else
+				$program[$i]['content']=iconv('UTF-8','GB2312//IGNORE','');
+			if(isset($program[$i]['abs']))	
+				$program[$i]['abs']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['abs']);		   
+			else
+				$program[$i]['abs']=iconv('UTF-8','GB2312//IGNORE','');
+			$program[$i]['duration']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['duration']);
+			$program[$i]['host']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['host']);
+			if(isset($program[$i]['image']))	   
+				$program[$i]['image']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['image']);
+			if(isset($program[$i]['area']))	   
+				$program[$i]['area']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['area']);
+			if(isset($program[$i]['type']))	   
+				$program[$i]['type']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['type']);
+			else
+				$program[$i]['type']=iconv('UTF-8','GB2312//IGNORE','others');	  
+			$program[$i]['actor']=iconv('UTF-8','GB2312//IGNORE', $program[$i]['actor']);
+			   
+
+			$t="'".$program[$i]['time']."'";
+			$n="'".$program[$i]['name']."'";
+			$c="'".$program[$i]['content']."'";
+			$duration="'".$program[$i]['duration']."'";
+			$abs="'".$program[$i]['abs']."'";
+			$host="'".$program[$i]['host']."'";
+			$type="'".$program[$i]['type']."'";
+			$actor="'".$program[$i]['actor']."'";
+			$image="'".$program[$i]['image']."'";
+			$area="'".$program[$i]['area']."'";
+
+			//对标签进行编码
+			$Gnum1=iconv('UTF-8','GB2312//IGNORE','频道号');	
+			$channel1=iconv('UTF-8','GB2312//IGNORE','频道名称');	
+			$t1=iconv('UTF-8','GB2312//IGNORE','节目时间');	
+			$date1=iconv('UTF-8','GB2312//IGNORE','节目日期');	
+			$day1=iconv('UTF-8','GB2312//IGNORE','星期');	
+			$n1=iconv('UTF-8','GB2312//IGNORE','节目名称');	
+			$c1=iconv('UTF-8','GB2312//IGNORE','节目预告');	
+			$type1=iconv('UTF-8','GB2312//IGNORE','类型');	
+			$host1=iconv('UTF-8','GB2312//IGNORE','主持人');	
+			$area1=iconv('UTF-8','GB2312//IGNORE','国家地区');
+			$image1=iconv('UTF-8','GB2312//IGNORE','播出时间');
+			$duration1=iconv('UTF-8','GB2312//IGNORE','播出时长');
+			$abs1=iconv('UTF-8','GB2312//IGNORE','其他');
+
+			$query="INSERT INTO `program_new`(`$Gnum1`,`$channel1`,`$t1`,`$date1`,`$day1`,`$n1`,`$c1`,`$type1`,`$host1`,`$area1`,`$image1`,`$duration1`,`$abs1`) VALUES ($Gnum,$channel,$t,$date,$day,$n,$c,$type,$host,$area,$image,$duration,$abs)";
+			mysql_query($query);
+			print mysql_error();
+		}
+		print "database ok!\n";
+        mysql_close();
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  
+?>

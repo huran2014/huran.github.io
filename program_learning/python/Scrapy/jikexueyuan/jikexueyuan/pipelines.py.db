@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+
+# Define your item pipelines here
+#
+# Don't forget to add your pipeline to the ITEM_PIPELINES setting
+# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
+
+import MySQLdb
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+
+class MovienewsPipeline(object):
+    def process_item(self, item, spider):
+	try:
+		conn = MySQLdb.connect(
+			host = '127.0.0.1',
+			port = 3306,
+			user = 'root',
+			passwd = '12345',
+			db = 'stczwd',  #read_default_file='/etc/mysql/my.cnf',
+			charset='utf8'
+                    )
+		print "Connet to MySQL server successfully."
+	except:
+	    print "Could not connect to MySQL server."
+	cur = conn.cursor()
+	#movieid=int(cur.execute("select max(id) from movienews"))
+	#if(movieid>110):
+	#cur.execute("truncate table movienews")
+	
+#	#执行那个查询，这里用的是select语句
+#    	cur.execute("select * from movienews")
+#    	#使用cur.rowcount获取结果集的条数
+#    	numrows = int(cur.rowcount)
+#	if(numrows>=100):
+#		cur.execute("truncate table movienews")
+
+	#print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+	#print 'item='+str(item)
+	#print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+	title=''.join(item['title'])
+	url=''.join(item['url'])
+	image=''.join(item['image'])
+	src=''.join(item['src'])
+	pdate=''.join(item['pdate'])
+	content=''.join(item['content'])
+	sql = "insert into movienews (title,url,image,src,pdate,content) values ('%s','%s','%s','%s','%s','%s')"%(title,url,image,src,pdate,content)
+	#sql = "insert into movienews (title,url,image,src,pdate,content) values ('%s','%s','%s','%s','%s','%s')"%(item['title'],item['url'],item['image'],item['src'],item['pdate'],item['content'])
+	#print 'sql='+sql
+	cur.execute(sql)
+	conn.commit()
+	conn.close()
+	return item

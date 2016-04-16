@@ -1,0 +1,65 @@
+#/usr/bin/python
+# -*- coding:utf-8 -*-
+
+from scrapy.spider import Spider
+from scrapy.selector import Selector
+from scrapy import log
+
+from jikexueyuan.items import JikexueyuanItem,LessonItem
+
+
+class JikexueyuanSpider(Spider):
+	"""爬取jikexueyuan标签"""
+	name = "jikexueyuan"
+	allowed_domains = ["jikexueyuan.com"]
+	start_urls = [
+		"http://www.jikexueyuan.com/course/html5/"
+	]
+	
+	def parse(self, response):
+	
+		sel = Selector(text=response.body)
+		sites = sel.xpath('//*[@id="aside"]/div/div[2]/ul/li')
+		items = []
+		print "sites="+str(sites)
+		
+		for site in sites:
+		#for i in range(1,8):
+			item = JikexueyuanItem()
+			
+			#site = sel.xpath('//*[@id="pager"]/div[1]/div[1]/ul/li['+str(i)+']')
+			span = site.xpath('div/span/text()').extract()
+			#span_class = site.xpath('dib/li/div/@class').extract()
+			#print "span="+str(span)		
+	
+			item['span'] = [s.encode('utf-8') for s in span]
+			#item['span_class'] = [c.encode('utf-8') for c in span_class]
+			#items.append(item)
+			items.append(item)
+			
+			#进一步爬取该目录下的文件
+			site_divs = site.xpath('div/div/div[1]')
+			#print "site_divs="+str(site_divs)
+			
+			item_lessons=[]
+			#lessons=''
+			for site_div in site_divs:
+				#item_lessons=[]
+				item_lesson = LessonItem()
+				#title = site_div.xpath('test()').extract()
+				title = site_div.xpath('a/text()').extract()
+				link = site_div.xpath('a/@href').extract()
+
+				item_lesson['title'] = [t.encode('utf-8') for t in title]
+				item_lesson['link'] = [l.encode('utf-8') for l in link]
+				item_lessons.append(item_lesson)
+				#lessons += str(item_lesson)
+			item['lesson'] = '\'' + str(item_lessons) + '\''
+			
+			#recode
+			log.msg("Appending item...",level='INFO')
+		
+		
+		log.msg("Append done.",level='INFO')
+		return items
+	

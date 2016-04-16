@@ -1,0 +1,14 @@
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+		<title>Upload Successfully</title>
+	</head>
+	<body>
+		<p>朋友们</p>
+		{% for person in names %}
+		<p>{{person.name}}</p>
+		<p>{{person.age}}</p>
+		<br>
+		{% endfor %}
+	</body>
+</html>

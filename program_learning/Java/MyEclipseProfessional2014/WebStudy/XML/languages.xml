@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Languages cat="it">
+	<lan id="1">
+		<name>Java</name>
+		<ide>Eclipse</ide>
+	</lan>
+	<lan id="2">
+		<name>C++</name>
+		<ide>Visual Studio</ide>
+	</lan>
+	<lan id="3">
+		<name>Python</name>
+		<ide>PythonIDE</ide>
+	</lan>
+</Languages>

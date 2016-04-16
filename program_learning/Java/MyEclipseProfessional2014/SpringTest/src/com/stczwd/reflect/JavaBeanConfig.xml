@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <bean id="javaBean" class="com.stczwd.reflect.JavaBean">
+       <property name="userName">
+           <value>极客学院</value>
+       </property>
+       <property name="password">
+           <value>1234567890</value>
+       </property>
+    </bean>
+</beans>

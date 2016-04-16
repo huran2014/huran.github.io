@@ -1,0 +1,324 @@
+2015-05-05 20:15:32+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-05 20:15:32+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3cschool_spider.py", line 5, in <module>
+    from scrapy.spider import Spider
+ImportError: cannot import name Spider
+2015-05-05 20:26:24+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-05 20:26:24+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3cschool_spider.py", line 14, in <module>
+    class W3schoolSpider(Spider):
+NameError: name 'Spider' is not defined
+2015-05-05 20:28:34+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-05 20:28:34+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3cschool_spider.py", line 13, in <module>
+    class W3schoolSpider(scrapy.Spider):
+AttributeError: 'module' object has no attribute 'Spider'
+2015-05-05 21:00:22+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-05 21:00:22+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3cschool_spider.py", line 5, in <module>
+    from scrapy.spider import Spider
+ImportError: cannot import name Spider
+2015-05-05 21:01:41+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-05 21:01:41+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3cschool_spider.py", line 5, in <module>
+    from scrapy.spider import W3cSpider
+ImportError: cannot import name W3cSpider
+2015-05-05 21:16:32+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-05 21:16:32+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3cschool_spider.py", line 6, in <module>
+    from scrapy.selector import Selector
+ImportError: cannot import name Selector
+2015-05-06 09:15:59+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-06 09:15:59+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3school_spider.py", line 11, in <module>
+    from w3school.items import W3schoolItem
+ImportError: cannot import name W3schoolItem
+2015-05-06 09:17:34+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-06 09:17:34+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3school_spider.py", line 10, in <module>
+    from w3school.items import W3schoolItem
+ImportError: cannot import name W3schoolItem
+2015-05-06 09:32:59+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-06 09:32:59+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3school_spider.py", line 10, in <module>
+    from w3school.items import W3schoolItem
+ImportError: cannot import name W3schoolItem
+2015-05-06 09:42:50+0800 [scrapy] INFO: Scrapy 0.12.0.2546 started (bot: w3school)
+2015-05-06 09:42:50+0800 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 4, in <module>
+    execute()
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 131, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 97, in _run_print_help
+    func(*a, **kw)
+  File "/usr/lib/python2.7/dist-packages/scrapy/cmdline.py", line 138, in _run_command
+    cmd.run(args, opts)
+  File "/usr/lib/python2.7/dist-packages/scrapy/commands/crawl.py", line 42, in run
+    q = self.crawler.queue
+  File "/usr/lib/python2.7/dist-packages/scrapy/command.py", line 33, in crawler
+    self._crawler.configure()
+  File "/usr/lib/python2.7/dist-packages/scrapy/crawler.py", line 36, in configure
+    self.spiders = spman_cls.from_settings(self.settings)
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 33, in from_settings
+    return cls(settings.getlist('SPIDER_MODULES'))
+  File "/usr/lib/python2.7/dist-packages/scrapy/spidermanager.py", line 23, in __init__
+    for module in walk_modules(name):
+  File "/usr/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 65, in walk_modules
+    submod = __import__(fullpath, {}, {}, [''])
+  File "/home/ljq/Downloads/Scrapy/w3school/w3school/spiders/w3school_spider.py", line 10, in <module>
+    from w3school.items import W3Item
+ImportError: cannot import name W3Item
+Traceback (most recent call last):
+  File "/usr/bin/scrapy", line 9, in <module>
+    load_entry_point('Scrapy==0.24.6', 'console_scripts', 'scrapy')()
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 122, in execute
+    cmds = _get_commands_dict(settings, inproject)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 46, in _get_commands_dict
+    cmds = _get_commands_from_module('scrapy.commands', inproject)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 29, in _get_commands_from_module
+    for cmd in _iter_command_classes(module):
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 20, in _iter_command_classes
+    for module in walk_modules(module_name):
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 68, in walk_modules
+    submod = import_module(fullpath)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/commands/bench.py", line 3, in <module>
+    from scrapy.tests.mockserver import MockServer
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/tests/mockserver.py", line 6, in <module>
+    from twisted.internet import reactor, defer, ssl
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/ssl.py", line 223, in <module>
+    from twisted.internet._sslverify import (
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/_sslverify.py", line 192, in <module>
+    verifyHostname, VerificationError = _selectVerifyImplementation(OpenSSL)
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/_sslverify.py", line 167, in _selectVerifyImplementation
+    from service_identity import VerificationError
+  File "/usr/local/lib/python2.7/dist-packages/service_identity/__init__.py", line 12, in <module>
+    from . import pyopenssl
+  File "/usr/local/lib/python2.7/dist-packages/service_identity/pyopenssl.py", line 12, in <module>
+    from pyasn1_modules.rfc2459 import GeneralNames
+  File "/usr/local/lib/python2.7/dist-packages/pyasn1_modules/rfc2459.py", line 72, in <module>
+    class AttributeValue(univ.Any): pass
+AttributeError: 'module' object has no attribute 'Any'
+Traceback (most recent call last):
+  File "/usr/local/bin/scrapy", line 9, in <module>
+    load_entry_point('Scrapy==0.24.6', 'console_scripts', 'scrapy')()
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 122, in execute
+    cmds = _get_commands_dict(settings, inproject)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 46, in _get_commands_dict
+    cmds = _get_commands_from_module('scrapy.commands', inproject)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 29, in _get_commands_from_module
+    for cmd in _iter_command_classes(module):
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/cmdline.py", line 20, in _iter_command_classes
+    for module in walk_modules(module_name):
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/utils/misc.py", line 68, in walk_modules
+    submod = import_module(fullpath)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/commands/bench.py", line 3, in <module>
+    from scrapy.tests.mockserver import MockServer
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/tests/mockserver.py", line 6, in <module>
+    from twisted.internet import reactor, defer, ssl
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/ssl.py", line 223, in <module>
+    from twisted.internet._sslverify import (
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/_sslverify.py", line 192, in <module>
+    verifyHostname, VerificationError = _selectVerifyImplementation(OpenSSL)
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/_sslverify.py", line 167, in _selectVerifyImplementation
+    from service_identity import VerificationError
+  File "/usr/local/lib/python2.7/dist-packages/service_identity/__init__.py", line 12, in <module>
+    from . import pyopenssl
+  File "/usr/local/lib/python2.7/dist-packages/service_identity/pyopenssl.py", line 12, in <module>
+    from pyasn1_modules.rfc2459 import GeneralNames
+  File "/usr/local/lib/python2.7/dist-packages/pyasn1_modules/rfc2459.py", line 72, in <module>
+    class AttributeValue(univ.Any): pass
+AttributeError: 'module' object has no attribute 'Any'

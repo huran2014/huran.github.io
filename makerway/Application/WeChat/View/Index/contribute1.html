@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>myKeeps</title>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+</head>
+<body>
+	<a href="{:U(bookcenter)}">首页</a>
+	<div>
+		<form action="{:U(ensure)}" method="post">
+			ISBN:
+			<input type="text" name="isbn" id="isbn" /></br>
+			<!-- <input type="button" class="send" value="弹窗查看"  /></br> -->
+			<input type="submit" value="查看书的信息"  /></br>
+		</form>
+	</div>
+</body>
+	<script type="text/javascript">
+		$(function(){
+			$('.send').click(function(){
+				var s = $('#isbn').val();
+				$.ajax({
+					type:"POST",
+					url:'https://api.douban.com/v2/book/isbn/:'+s,
+					dataType:"jsonp",
+					success:function(data) {
+						alert(data.summary);
+					 },
+					error:function() {
+						alert("查询不到此书，请重输入ISBN码");
+					 }
+				})
+
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial,Verdana,Geneva,sans-seri,Timeshiragino sans gb,microsoft yahei,simsun;/*改动*/
+    font-size: 16px;
+}
+body{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.main{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.main-form{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.describe{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+.color{
+    color: #0066FF;
+    font-size: 20px;
+}
+.position{
+    width: 100%;
+    /*margin: 0 auto;*/
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.small{
+    font-size: 16px;
+    color: #0066FF;
+}
+.describe img{
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size:16px;
+    font-family:Arial,Verdana,Geneva,sans-seri,Timeshiragino sans gb,microsoft yahei,simsun;/*改动*/
+    color:black;
+    background-color: #e9edf0;
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    height: 75px;
+    color: #fff;
+    background-color: #091835;
+    border-bottom: 1px solid black;
+}
+.title-left{
+    width: 30%;
+    margin-left: 1%;
+    padding-top: 8px;
+    /*float: left;*/
+}
+.title img{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.title-m{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 2%;
+    line-height: 60px;
+}
+.big{
+    font-size: 40px;
+    margin-left: 0;
+}
+/*修改过*/
+.title-top{
+    position: absolute;
+    font-size: 18px;
+    margin-top: -7px;
+    margin-left: 0;
+}
+/*修改过*/
+.title-bottom{
+    font-size: 14px;
+    margin-left: 0;
+}
+.title-squre{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 6%;
+}
+.title-squre a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-squre:hover{
+    /*text-decoration: underline;*/
+    cursor: pointer;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+}
+.title-main{
+    position: absolute;
+    margin-top: 20px;
+    margin-left:3%;
+}
+.title-main a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-main:hover{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.title-share{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 7%;
+}
+.title-share a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-share:hover{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.title ul{
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 3% 0 0;
+    float: right;
+}
+.title ul li{
+    display: inline;
+    /*border: 1px solid black;*/
+    margin-right: 20px;
+    padding: 3px 10px;
+}
+.register{
+    cursor: pointer;
+}
+.register a{
+    color: #fff;
+    /*color: #000;*/
+    text-decoration: none;
+}
+.login{
+    cursor: pointer;
+}
+.login a{
+    /*color: #000;*/
+    color: #fff;
+    text-decoration: none;
+}
+.username-c{
+    padding: 27px 3% 0 0;
+    float: right;
+}
+.username-d{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.username-d a{
+    color: #fff;
+    text-decoration: none;
+}
+.div-search{
+    position: relative;
+    width:35%;
+    margin: -65px auto;
+}
+.search-a{
+    width: 100%;
+}
+.search-a input{
+    position: absolute;
+    z-index: 1;
+    margin-left: 97%;
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.search{
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+}
+.div-search span{
+    margin-left:  2.8%;
+    width: 25%;
+    font-size: 14px;
+    line-height: 22px;
+}
+.classify{
+    height: 60px;
+    background-color: #84ccc0;
+}
+.classify-title{
+    padding-left: 20px;
+    line-height: 60px;
+}
+.main{
+    width: 100%;
+    height: 500px;
+    /*border: 1px solid black;*/
+}
+.main-body{
+    width: 54%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.main-left{
+    width: 50%;
+    /*height: 500px;*/
+    float: left;
+    /*border: 1px solid black;*/
+}
+.main-main{
+    width: 100%;
+    /*text-align: center;*/
+    margin: 0 auto;
+    /*height:550px;*/
+    /*border:1px solid black;*/
+    border-radius: 5px;
+}
+.book-title{
+    font-size: 18px;
+    width: 100%;
+    height:60px;
+    line-height: 60px;
+    color: #fff;
+    background-color: #5e99b3;
+    /*margin: 10px auto 0;*/
+    text-align: center;
+    margin-top: 10px;
+}
+.book-isbn{
+    padding-top: 50px;
+}
+.num1{
+    text-align: center;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #5e99b3;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 20px;
+}
+.num2{
+    text-align: center;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #5e99b3;
+    /*margin-top: 5px;*/
+    color: #fff;
+    font-weight: 600;
+    line-height: 20px;
+}
+.book-check{
+    margin-left: 25px;
+}
+.isbn{
+    margin-left: -5px;
+}
+.main-main form{
+    margin-top: 40px;
+}
+.main-main form > label{
+    font-size: 18px;
+    margin-left: 30px;
+}
+.isbn-input{
+    height: 30px;
+    width: 35%;
+    font-size: 20px;
+    margin-left: 1%;
+}
+.main-main form > span{
+    /*line-height: 50px;*/
+    padding-left: 35px;
+    display: block;
+    margin-top: 20px;
+}
+.red{
+    color: red;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.posun{
+    width: 100%;
+    /*margin-left: 30px;*/
+    margin-top: 50px;
+}
+.posun input{
+    margin-left: 50px;
+    margin-top: 15px;
+}
+.posun-degree{
+    width: 100%;
+    /*margin-left: 30px;*/
+    margin-top: 50px;
+}
+.common{
+    margin-left: 25px;
+}
+.posun-degree label{
+    width:55%;
+    display: block;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.posun-degree input{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.sure-submit{
+    width: 100%;
+    text-align: center;
+}
+.sure{
+    padding: 6px 30px;
+    margin-top: 30px;
+    border: 2px solid #7caabe;
+    border-radius: 3px;
+    /*margin-left: 40%;*/
+}
+.main-right{
+    width:45%;
+    border: 1px solid black;
+    height: 500px;
+    float: left;
+}
+.img{
+    margin-top: -40px;
+    /* margin-left: 5%; */
+    float: right;
+}
+.detail span a{
+    cursor: pointer;
+}

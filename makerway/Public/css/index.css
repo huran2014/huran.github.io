@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size:16px;
+    font-family:Arial,Verdana,Geneva,sans-seri,Timeshiragino sans gb,microsoft yahei,simsun;/*改动*/
+    color:black;
+    width: 100%;
+}
+.logs{
+    position: fixed;
+    top:500px;
+    left: 20%;
+    /*width: 55%;*/
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+    padding: 10px;
+}
+.title .logs ul{
+    list-style-type: none;
+    margin: 5px 10px;
+}
+.content{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    height: 568px;
+    color: #fff;
+}
+.title img{
+    width: 100%;
+    z-index: -1;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.title-m{
+    font-size: 26px;
+    font-weight: 700;
+    margin-left: 30px;
+    line-height: 60px;
+}
+.big{
+    font-size: 40px;
+}
+/*修改过*/
+.title-top{
+    font-size: 18px;
+    position: absolute;
+    margin-top: -7px;
+}
+/*修改过*/
+.title-bottom{
+    font-size: 14px;
+}
+/*修改过*/
+.title-squre{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.title-squre a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-squre:hover{
+    /*text-decoration: underline;*/
+    cursor: pointer;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+}
+/*修改过*/
+.title-main{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.title-main a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-main:hover{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+/*修改过*/
+.title-share{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.title-share a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-share:hover{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.title ul{
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 30px;
+    float: right;
+}
+.title ul li{
+    display: inline;
+    /*border: 1px solid black;*/
+    margin-right: 20px;
+    padding: 3px 10px;
+}
+.username-c{
+    margin: 25px 60px;
+    float: right;
+}
+.username-d{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.username-d a{
+    color: #fff;
+    text-decoration: none;
+}
+.register{
+    cursor: pointer;
+}
+.register a{
+    color: #fff;
+    text-decoration: none;
+}
+.login{
+    cursor: pointer;
+}
+.login a{
+    color: #fff;
+    text-decoration: none;
+}
+.div-search{
+    position: relative;
+    width:500px;
+    margin: 75px auto 60px;
+}
+.search-title{
+    font-size: 38px;
+    text-align: center;
+}
+.search-a img{
+    z-index: 1;
+    margin-left: 487px;
+    margin-top: 94px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.search{
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    width: 500px;
+    background-color:transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.div-search span{
+    margin: 0 10px;
+    line-height: 40px;
+}
+/*修改过*/
+.share{
+    /*position: relative;*/
+    /*width: 400px;*/
+    width: 100%;
+    /*text-align: center;*/
+}
+.share-contribute{
+    position: relative;
+    display: none;
+    margin: -42px;
+    margin-left: 20%;
+    text-align: right;
+    float: left;
+}
+.left-direction{
+    margin-right: -25px;
+    margin-top: -18px;
+    float: right;
+}
+.right-direction{
+    margin-left: -25px;
+    margin-top: -18px;
+    float: left;
+}
+.button{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.share-share{
+    position: relative;
+    display: none;
+    margin-top: -42px;
+    margin-right: 20%;
+    text-align: left;
+    float: right;
+}
+/*修改过*/
+.input-1{
+    float: left;
+}
+.input-2{
+    float: right;
+}
+.share input{
+    height: 40px;
+    width: 180px;
+    background-color: #9fcc6c;
+    /*margin: 0 auto;*/
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+.share input:hover{
+    background-color: #86c340;
+}
+.img-li{
+    width: 100%;
+    /*margin: 0 auto;*/
+    margin-top: 35px;
+    /*padding-bottom: 50px;*/
+}
+.main ul{
+    text-decoration: none;
+    list-style: none;
+    /*margin-left: 10%;*/
+}
+.main ul li{
+    margin: 0 0;
+}
+.main ul li img{
+    height: 600px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.footer{
+    clear: both;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    border-top: 1px solid black;
+}
+.footer-img{
+    position: relative;
+    width: 130px;
+    margin: 0 auto;
+}
+.footer img{
+    /*float: right;*/
+    width: 130px;
+    height: 70px;
+    margin-top: 10px;
+    /*margin: 10px auto;*/
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+}
+.footer span{
+    float: right;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+.pass{
+    float: left;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 27px;
+}
+.detail span a{
+    cursor: pointer;
+}

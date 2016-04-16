@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/ad_books.css">
+</head>
+<body>
+	<div>
+	<ul>
+		<li><strong onclick="document.location='{:U(index)}'">首页</strong></li>
+		<li><strong onclick="document.location='{:U(books)}'">查看所有书籍</strong></li>
+		<li><strong onclick="document.location='{:U(users)}'">查看所有用户</strong></li>
+	</ul>
+		<div>
+			<ul class="whole">
+				<?php foreach ($books as $id => $book): ?>
+				<li>
+					<ul class="book">
+						<li>
+							<div class="id">
+								<p>书号</p>
+								<strong>{$book['book_id']}</strong></br></br>
+								<span class="delete" onclick="document.location='{:U(deleteBook,array('book_id'=>$book['book_id']))}'"><strong>删除此书</strong></span>
+							</div>
+						</li>
+						<li><div>
+								<img src="{$book['bookinfo']['image']}">
+							</div>
+						</li>
+						<li>
+						<div class="info">
+							<p>书名：{$book['bookinfo']['title']}</p>
+								<p>所有者：{$book['con_name']}</p>
+								<p>贡献者：{$book['owner_name']}</p>
+							<p>贡献时间：{$book['contribute_time']}</p>
+						</div>
+						</li>
+					</ul>
+				</li>
+				<?php endforeach ?>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

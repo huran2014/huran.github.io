@@ -1,0 +1,106 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>我要分享</title>
+    <link rel="stylesheet" type="text/css" href="/passon/Public/css/contribute.css">
+    <script type="text/javascript" src="/passon/Public/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+            <div class="title">
+                <div class="title-left">
+                    <span class="title-m"><span class="big">M</span><span class="title-top">AKERWAY</span><span class="title-bottom">一起分享智慧</span></span>
+                    <span class="title-main"><a href="<?php echo U(index);?>">首页</a></span>
+                    <!--<span class="title-squre"><a href="<?php echo U(squre);?>">广场</a></span>-->
+                    <span class="title-share"><a href="<?php echo U(share);?>">共享库</a></span>
+                </div>
+                <div class="div-search">
+                    <form name="search" action="<?php echo U(search);?>" method="post">
+                        <input  class="search" name="search" type="text" placeholder="书名/分类？" />
+                        <div class="search-a">
+                            <input type="image" src="/passon/Public/images/search.png" name="img">
+                            <!--<input type="submit" value="submit"/>-->
+                            <!--<img src="/passon/Public/images/search.png"/>-->
+                        </div>
+                    </form>
+                    <span>热门搜索：</span>
+                    <span class="detail">
+                        <span><a>数据库系统概念</a></span>
+                        <span><a>CSS 3实战</a></span>
+                        <span><a>操作系统概念</a></span>
+			        </span>
+                </div>
+                <!--<span>-->
+                <!--<ul>-->
+                <!--<li>注册</li>-->
+                <!--<li>登录</li>-->
+                <!--</ul>-->
+                <!--</span>-->
+                 <!--<span class="username-list">-->
+                    <!--<ul>-->
+                        <!--<li class="register"><a href="<?php echo U(register);?>">注册</a></li>-->
+                        <!--<li class="login"><a href="<?php echo U(login);?>">登录</a></li>-->
+                    <!--</ul>-->
+                <!--</span>-->
+                <span class="username-c">hello <span class="username-d"><a href="<?php echo U(person);?>"><?php echo cookie('username')?></a></span></span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="classify">
+                <div class="classify-title"><a style="cursor: pointer;color:#000;text-decoration: none" href="<?php echo U(index);?>">MakerWay</a>><a style="cursor: pointer;color:#000;text-decoration: none" href="<?php echo U(person);?>">个人中心</a>>我要分享</div>
+            </div>
+            <div class="main-body">
+                <!--<div class="main-left">-->
+                    <div class="main-main">
+                        <div class="book-title">书&nbsp;本&nbsp;信&nbsp;息</div>
+                        <form name="form" action="<?php echo U(ensure);?>" method="post" onsubmit="return check()">
+                            <label class="book-isbn"><span class="num1">1</span><span class="isbn">ISBN：</span></label><input class="isbn-input" name="isbn" type="text"/>
+                            <span>您可以从书籍<span class="red">封底的条形码上方</span>找到我哦</span>
+                            <div class="img" style="display: block">
+                                <img src="/passon/Public/images/isbn.png"/>
+                            </div>
+                            <!--<div class="posun">-->
+                                <!--<label><span class="num2">2</span><span class="book-check">书籍体检报告：</span></label><br/>-->
+                                <!--<div><input id="damage1" name="damage" type="radio" /><label for="damage1">无破损</label><br/></div>-->
+                                <!--<div><input id="damage2" name="damage" type="radio"/><label for="damage2">有破损</label></div>-->
+                            <!--</div>-->
+                            <div class="posun-degree">
+                                <span class="num2">2</span><span class="common">服务公约：</span>
+                                <label>1、在您需要时可以回收您的共享书籍。</label>
+                                <label>2、爱护书籍是每一位爱书之人的信条，如果在借阅过程中不慎给您的书籍造成了损坏，我们会以以下方式处理：</label>
+                                <label>a、遗失：将书籍遗失者，可自行购买与原书籍版本相同的书籍代替；无法购买与原版本相同的书籍，需按照图书标价的2倍赔偿；</label>
+                                <label>b、污损：批划、涂改、污损书籍者，根据情节轻重赔偿5-20元；图书污损严重影响阅读者，将按图书遗失的赔偿办法进行赔偿；</label>
+                                <label>c、撕割：割页、撕扯等严重损坏图书者，按遗失的赔偿办法赔偿。</label>
+                            </div>
+                            <div class="sure-submit">
+                                <input class="sure" name="submit" type="submit" value="确定"/>
+                            </div>
+                        </form>
+                    </div>
+                <!--</div>-->
+                <!--<div class="main-right">-->
+                    <!--<div style="display: none;">-->
+                        <!--<?php-->
+                        <!--header("location:ensure.html");-->
+                     <!--?>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68503572-4', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+<script type="text/javascript" src="/passon/Public/js/contribute.js"></script>
+<script type="text/javascript" src="/passon/Public/js/labelsearch.js"></script>
+</html>

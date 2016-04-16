@@ -1,0 +1,46 @@
+.book{
+	background-color: black;
+	color:white;
+	list-style: none;
+	float: left;
+	text-align: center;
+	margin: 20px 20px;
+	border-radius: 10px;
+	width: 320px;
+	height: 320px;
+}
+.book li{
+	display: inline-table;
+	float: left;
+}
+.blog{
+	background-color: grey;
+	color: yellow;
+	list-style: none;
+}
+.blogi{
+	margin: 0px 10px;
+}
+.info{
+	margin: 0px 10px;
+}
+.id{
+	text-align: center;
+	margin: 0px 20px;
+}
+.whole{
+	list-style: none;
+}
+.delete{
+	background-color: white;
+	color: black;
+	border-radius: 2px;
+	margin: 20px 0px;
+	padding: 5px;
+	cursor: pointer;
+}
+.delete:hover{
+	background-color: grey;
+	color: yellow;
+
+}

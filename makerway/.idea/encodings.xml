@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Public/css/bind.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/css/guest.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/addfriend.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/addgroup.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/bind.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/creategroup.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/group.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/groupmain.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/guest.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/guestGroup.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Public/js/person.js" charset="UTF-8" />
+  </component>
+</project>

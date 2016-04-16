@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>图书漂流</title>
+    <link rel="stylesheet" href="__Public__/Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="text-align: center"><small><strong>图书漂流系统</strong></small></h1>
+        <!--信息展示页，已绑定用户只进行此页面展示-->
+        <div class="msg" style="text-align: center;display: block">
+            <h4 style="text-align: left">欢迎您，<a href="http://www.makerway.space/makerway/Home/Book/userinfo.html?openid={$UserInfo.openid}">{$UserInfo.nickname}</a></h4>
+            <h3 style="text-align: left"><small>您当前分享的书为：<strong>{$BookInfo.title}</strong></small></h3>
+            <div align="center"><a href="http://www.makerway.space/makerway/Home/Book/bookinfo.html?ISBN={$BookInfo.isbn}&openid={$UserInfo.openid}"><img src="{$BookInfo.image}"></a></div>
+            <br>
+            <h4 style="text-align: center">信息确认</h4>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="account" class="col-sm-2 control-label" style="float: left;margin-top:6px ">用户名</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" readonly="readonly" name="msg_username" value="{$BookUserInfo.username}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">电话</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" readonly="readonly" name="msg_phone" value="{$BookUserInfo.phone}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="addr" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">住址</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" readonly="readonly" name="msg_addr" value="{$BookUserInfo.addr}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default share_confirm">确认分享</button>
+                        <button type="button" class="btn btn-default msg_modify">修改信息</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--分享成功展示页-->
+        <div class="share_success" style="text-align: center;display: none">
+            <h4 style="text-align: left"><a href="http://www.makerway.space/Home/Book/userinfo.html?openid={$UserInfo.openid}">{$UserInfo.nickname}</a>,感谢您的分享！</h4>
+            <h3 style="text-align: left"><small>您当前分享的书为：<strong>{$BookInfo.title}</strong></small></h3>
+            <div align="center"><a href="http://www.makerway.space/Home/Book/bookinfo.html?ISBN={$BookInfo.isbn}&openid={$UserInfo.openid}"><img src="{$BookInfo.image}"></a></div>
+            <br>
+            <h4 style="text-align: left">您的分享记录:</h4>
+
+            <h4 style="text-align: left">您可能感兴趣的书籍:</h4>
+
+        </div>
+
+        <!--注册页，当未进行绑定时出现-->
+        <div class="register" style="text-align: center;display: none">
+            <h4 style="text-align: left">报告！书本已准备就绪!</h4>
+            <hr>
+            <h4>信息完善</h4>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="account" class="col-sm-2 control-label" style="float: left;margin-top:6px ">用户名</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="register_username" value="{$username}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">电话</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="register_phone" value="{$phone}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">住址</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="register_addr" value="{$addr}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10 btn-group">
+                        <button type="button" class="btn btn-default user_register">注册</button>
+                        <button type="button" class="btn btn-default user_login">登录</button>
+                    </div>
+                </div>
+            </form>
+            <h5 style="text-align: left">注：网站端用户可直接登录</h5>
+            <h4 style="text-align: left">你的书即将开启神秘之旅!</h4>
+        </div>
+
+        <!--用户登录页-->
+        <div class="login" style="text-align: center;display: none">
+            <h4 style="text-align: left">报告！书本已准备就绪!</h4>
+            <hr>
+            <h4>用户登录</h4>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="account" class="col-sm-2 control-label" style="float: left;margin-top:6px ">用户名</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="login_username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">密码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="login_password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default user_login_confirm">登录</button>
+                    </div>
+                </div>
+            </form>
+            <h4 style="text-align: left">你的书即将开启神秘之旅!</h4>
+        </div>
+
+        <!--修改信息页-->
+        <div class="modify" style="text-align: center;display: none">
+            <h4>信息修改</h4>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="account" class="col-sm-2 control-label" style="float: left;margin-top:6px ">用户名</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="modify_username" value="{$username}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">电话</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="modify_phone" value="{$phone}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label" style="float: left;margin-top:6px;margin-left:13px">住址</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" style="width: 70%" name="modify_addr" value="{$addr}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default modify_confirm">确认修改</button>
+                        <button type="button" class="btn btn-default modify_cancel">取消修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--判断展示页面-->
+        <input class="tip" type="hidden" name="tip" value="{$tip}">
+        <input class="isbn" type="hidden" name="isbn" value="{$isbn}">
+        <input class="openid" type="hidden" name="openid" value="{$openid}">
+
+    </div>
+
+    <!--js文件-->
+    <script src="__Public__/JQuery/jquery-2.2.0.min.js"></script>
+    <script src="__Public__/Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        function check_show(){
+            var tip = $("input[name=tip]").val();
+            //var tip = $(".tip").val();
+            //alert(tip);
+            /*if(tip==1){
+                $(".msg").hide();
+                $(".register").show();
+            }else{
+                $(".msg").show();
+                $(".register").hide();
+            }*/
+        }
+        function changeCode(){
+
+        }
+        /*DOM加载完毕执行函数*/
+        $(document).ready(function(){
+            /*初始页面信息，isbn、openid*/
+            var isbn = $("input[name=isbn]").val();
+            var openid = $("input[name=openid]").val();
+
+            /*确认分享点击判断事件*/
+            $(".share_confirm").click(function(){
+                var username = $("input[name=msg_username]").val();
+                var phone = $("input[name=msg_phone]").val();
+                var addr = $("input[name=msg_addr]").val();
+                /*var username = 1;
+                var phone = 2;
+                var addr = 3;*/
+                if(username==''||phone==''||addr==''){
+                    alert("请先完善个人信息！");
+                    $(".msg").hide();90
+                    $(".register").show();
+
+                }else{
+                    /*利用ajax进行书籍分享*/
+                    $.ajax({
+                        type:"POST",
+                        url:"{:U('share_handle')}",
+                        dataType:"json",
+                        data:{'username':username,'phone':phone,'addr':addr,'isbn':isbn,'openid':openid,'type':'share'},
+                        success:function(data){
+                            /*location.reload();*/
+
+                            alert('分享成功,感谢使用MakerWay分享图书，传递智慧！');
+                            $(".msg").hide();
+                            $(".share_success").show();
+                        },
+                        error: function (data) {
+                            console.log("error-----------");
+                            console.log(data);
+                        }
+                    });
+
+                }
+            });
+            /*修改信息点击判断事件*/
+            $(".msg_modify").click(function(){
+                var username = $("input[name=msg_username]").val();
+                var phone = $("input[name=msg_phone]").val();
+                var addr = $("input[name=msg_addr]").val();
+                if(username==''||phone==''||addr==''){
+                    alert("请先完善个人信息");
+                    $(".msg").hide();
+                    $(".register").show();
+                }else{
+                    $(".msg").hide();
+                    $(".modify").show();
+                    /*信息修改页*/
+                    $("input[name=modify_username]").val(username);
+                    $("input[name=modify_phone]").val(phone);
+                    $("input[name=modify_addr]").val(addr);
+                }
+            });
+            /*注册点击事件*/
+            $(".user_register").click(function(){
+                var username = $("input[name=register_username]").val();
+                var phone = $("input[name=register_phone]").val();
+                var addr = $("input[name=register_addr]").val();
+                if(username==''||phone==''||addr==''){
+                    alert("请补全信息，以便更好地使用makerway！");
+                }else{
+                    /*利用ajax进行用户注册*/
+                    $.ajax({
+                        type:"POST",
+                        url:"{:U('share_handle')}",
+                        dataType:"json",
+                        data:{'username':username,'phone':phone,'addr':addr,'isbn':isbn,'openid':openid,'type':'register'},
+                        success:function(data){
+                            /*location.reload();*/
+                            alert('注册成功,恭喜您成为makerway大家庭的一员！');
+                            $(".register").hide();
+                            $(".msg").show();
+                            /*前端直接进行数值填充*/
+                            /*信息确认页*/
+                            $("input[name=msg_username]").val(username);
+                            $("input[name=msg_phone]").val(phone);
+                            $("input[name=msg_addr]").val(addr);
+                            /*信息修改页*/
+                            $("input[name=modify_username]").val(username);
+                            $("input[name=modify_phone]").val(phone);
+                            $("input[name=modify_addr]").val(addr);
+                        },
+                        error: function (data) {
+                            console.log("error-----------");
+                            console.log(data);
+                        }
+                    });
+                }
+            });
+            /*点击登录事件*/
+            $(".user_login").click(function(){
+                $(".register").hide();
+                $(".login").show();
+            });
+            /*用户登录事件*/
+            $(".user_login_confirm").click(function(){
+                var username = $("input[name=login_username]").val();
+                var password = $("input[name=login_password]").val();
+                /*ajax处理用户登录*/
+                $.ajax({
+                    type:"POST",
+                    url:"{:U('share_handle')}",
+                    dataType:"json",
+                    data:{'username':username,'password':password,'isbn':isbn,'openid':openid,'type':'login'},
+                    success:function(data){
+                        /*location.reload();*/
+                        if(data.code==0){
+                            alert('登录失败，请检查你的用户名或密码是否正确！');
+                        }else{
+                            alert('登录成功！');
+                            //1s后刷新重新进入此页面
+                            setTimeout(function(){
+                                window.location.href = "{:U('share')}?ISBN="+isbn+"&openid="+openid;
+                            },1000);
+                        }
+                    },
+                    error: function (data) {
+                        console.log("error-----------");
+                        console.log(data);
+                    }
+                });
+
+
+            });
+            /*确认修改*/
+            $(".modify_confirm").click(function(){
+                var username = $("input[name=modify_username]").val();
+                var phone = $("input[name=modify_phone]").val();
+                var addr = $("input[name=modify_addr]").val();
+                if(username==''||phone==''||addr==''){
+                    alert("请补全信息，以便更好地使用makerway！");
+                }else{
+                    /*ajax修改用户信息*/
+                    $.ajax({
+                        type:"POST",
+                        url:"{:U('share_handle')}",
+                        dataType:"json",
+                        data:{'username':username,'phone':phone,'addr':addr,'isbn':isbn,'openid':openid,'type':'modify'},
+                        success:function(data){
+                            /*location.reload();*/
+                            alert('信息修改成功！');
+                            $(".msg").show();
+                            $(".modify").hide();
+                            /*前端直接进行数值填充*/
+                            /*信息确认页*/
+                            $("input[name=msg_username]").val(username);
+                            $("input[name=msg_phone]").val(phone);
+                            $("input[name=msg_addr]").val(addr);
+                            /*信息修改页*/
+                            $("input[name=modify_username]").val(username);
+                            $("input[name=modify_phone]").val(phone);
+                            $("input[name=modify_addr]").val(addr);
+
+                        },
+                        error: function (data) {
+                            console.log("error-----------");
+                            console.log(data);
+                        }
+                    });
+
+
+                }
+            });
+            /*取消修改*/
+            $(".modify_cancel").click(function(){
+                $(".modify").hide();
+                $(".msg").show();
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li><strong onclick="document.location='{:U(index)}'">首页</strong></li>
+		<li><strong onclick="document.location='{:U(books)}'">查看所有书籍</strong></li>
+		<li><strong onclick="document.location='{:U(users)}'">查看所有用户</strong></li>
+	</ul>
+	<ul>
+		<?php foreach ($users as $key => $user): ?>
+			<li>
+				<div>
+					<p>{$user['book_user_info_id']}</p>
+					<p>{$user['username']}</p>
+					<p>{$user['phone']}</p>
+					<p><span onclick="document.location='{:U(deleteUser,array('book_user_info_id'=>$user['book_user_info_id']))}'"><strong>删除此用户！</strong></span></p>
+					<ul>
+					<?php foreach ($user['books'] as $id => $book): ?>
+						<li>
+							<div>
+								<p>{$book['book_id']}</p>
+								<p>{$book['bookinfo']['title']}</p>
+								<img src="{$book['bookinfo']['image']}">
+							</div>
+						</li>
+					<?php endforeach ?>
+					</ul>
+				</div>
+			</li>
+		<?php endforeach ?>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>图书漂流</title>
+</head>
+<body>
+    <div style="text-align: center"><h2>{$UserInfo.nickname}</h2></div>
+    <!--<div style="text-align: center"><img src="{$UserInfo.headimgurl}"></div>-->
+    <h3>个人信息</h3>
+    <hr>
+    <form action="{:U('updateUserInfo')}" method="post">
+        <table border="1" align="center">
+            <tr>
+                <td>项目</td>
+                <td>信息</td>
+                <td>是否正确</td>
+            </tr>
+            <tr>
+                <td>姓名</td>
+                <td><input type="text" name="name" value="{$UserInfo.name}"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>电话</td>
+                <td><input type="text" name="phone" value="{$UserInfo.phone}"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>住址</td>
+                <td><input type="text" name="location" value="{$UserInfo.location}"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+        <br>
+        <div align="center"><input type="submit" value="信息正确，提交"></div>
+    </form>
+
+    <h3>您可能感兴趣的人</h3>
+
+</body>
+</html>

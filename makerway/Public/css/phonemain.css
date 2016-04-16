@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.main-img{
+    position: relative;
+    width: 40%;
+    height: 200px;
+    margin:50px auto 0;
+    /*border: 1px solid black;*/
+}
+.main-img img{
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.book-social{
+    position: relative;
+    width: 26%;
+    margin:30px auto 0;
+    /*border: 1px solid black;*/
+}
+.book-social input{
+    font-size: 18px;
+    padding: 5px 0;
+    width: 100%;
+    margin-top: 30px;
+}
+.book-social a{
+    font-size: 18px;
+    padding: 5px 0;
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid black;
+}

@@ -1,0 +1,1200 @@
+[ 2015-12-28T15:44:42+08:00 ] ::1 /passon/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.048003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2015-12-28T15:46:16+08:00 ] ::1 /passon/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.6730s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'index' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0120s ]
+SQL: INSERT INTO `wind87_passoncount` (`pagename`,`count`,`date`,`des`) VALUES ('index','1','2015 12 28',NULL) [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.1650s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('visiter','0.0.0.0','index','1451288775','2015-12-28','03:46:15 pm') [ RunTime:0.1980s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.049003s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.049003s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 21 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 22 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 23 行.
+NOTIC: [8] Use of undefined constant register - assumed 'register' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 26 行.
+NOTIC: [8] Use of undefined constant login - assumed 'login' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 27 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Undefined index: username D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant showLogs - assumed 'showLogs' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.205012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.205012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.029002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.029002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-28T15:46:18+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.2690s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.1110s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.4690s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0600s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-28T15:46:18+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.1430s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-28T15:46:19+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:19+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:20+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:22+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:23+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:24+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:24+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-12-28T15:46:26+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:26+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:27+08:00 ] ::1 /passon/index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'login' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `wind87_passoncount` (`pagename`,`count`,`date`,`des`) VALUES ('login','1','2015 12 28',NULL) [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0050s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('visiter','0.0.0.0','login','1451288787','2015-12-28','03:46:27 pm') [ RunTime:0.0250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant login_user - assumed 'login_user' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 17 行.
+NOTIC: [8] Use of undefined constant forget - assumed 'forget' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 21 行.
+NOTIC: [8] Use of undefined constant register - assumed 'register' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 25 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:31+08:00 ] ::1 /passon/index.php/Home/Index/login_user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booksusers` [ RunTime:0.1730s ]
+SQL: SELECT * FROM `wind87_booksusers` WHERE `username` = 'huran' AND `password` = 'f9069f0cba9cc846649f9f7493ddf10d'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_booksusers` WHERE (  `id` = '17' AND `username` = 'huran' AND `password` = 'f9069f0cba9cc846649f9f7493ddf10d' AND `phone` = '18813079759' AND `addr` = '01' AND `email` = '' AND `flag` = '1' ) LIMIT 1   [ RunTime:0.0220s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Home\Controller\IndexController.class.php 第 724 行.
+
+[ 2015-12-28T15:46:31+08:00 ] ::1 /passon/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'index' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'index' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='index',`count`='2',`date`='2015 12 28',`des`=NULL WHERE `id` = 91 [ RunTime:0.1180s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0080s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','index','1451288791','2015-12-28','03:46:31 pm') [ RunTime:0.0590s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 21 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 22 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 23 行.
+NOTIC: [8] Use of undefined constant register - assumed 'register' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 26 行.
+NOTIC: [8] Use of undefined constant login - assumed 'login' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 27 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant showLogs - assumed 'showLogs' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:32+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:32+08:00 ] ::1 /passon/index.php/Home/Index/showLogs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_booklog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_booklog` ORDER BY log_id  desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `book_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:46:33+08:00 ] ::1 /passon/index.php/Home/Index/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `wind87_passoncount` (`pagename`,`count`,`date`,`des`) VALUES ('share','1','2015 12 28',NULL) [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0190s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451288793','2015-12-28','03:46:33 pm') [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` LIMIT 1   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `wind87_book` ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:47:55+08:00 ] ::1 /passon/index.php/Home/Index/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='share',`count`='2',`date`='2015 12 28',`des`=NULL WHERE `id` = 93 [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0220s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451288875','2015-12-28','03:47:55 pm') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:48:19+08:00 ] ::1 /passon/index.php/Home/Index/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='share',`count`='3',`date`='2015 12 28',`des`=NULL WHERE `id` = 93 [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451288899','2015-12-28','03:48:19 pm') [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:49:46+08:00 ] ::1 /passon/index.php/Home/Index/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='share',`count`='4',`date`='2015 12 28',`des`=NULL WHERE `id` = 93 [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0070s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451288986','2015-12-28','03:49:46 pm') [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_book` ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:49:50+08:00 ] ::1 /passon/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'search' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `wind87_passoncount` (`pagename`,`count`,`date`,`des`) VALUES ('search','1','2015 12 28',NULL) [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0050s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','search','1451288990','2015-12-28','03:49:50 pm') [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE ( `title` LIKE '%投资%' OR `tags` LIKE '%投资%' )  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 20 行.
+NOTIC: [8] Use of undefined constant register - assumed 'register' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 43 行.
+NOTIC: [8] Use of undefined constant login - assumed 'login' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 56 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:49:50+08:00 ] ::1 /passon/index.php/Home/Index/search?search=%E6%8A%95%E8%B5%84
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'search' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'search' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='search',`count`='2',`date`='2015 12 28',`des`=NULL WHERE `id` = 94 [ RunTime:0.2590s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','search','1451288990','2015-12-28','03:49:50 pm') [ RunTime:0.1610s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE ( `title` LIKE '%投资%' OR `tags` LIKE '%投资%' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 20 行.
+NOTIC: [8] Use of undefined constant register - assumed 'register' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 43 行.
+NOTIC: [8] Use of undefined constant login - assumed 'login' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 56 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\bf3b4465296514de17e1f8dd92d84602.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:50:47+08:00 ] ::1 /passon/index.php/Home/Index/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='share',`count`='5',`date`='2015 12 28',`des`=NULL WHERE `id` = 93 [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0050s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451289046','2015-12-28','03:50:46 pm') [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:50:48+08:00 ] ::1 /passon/index.php/Home/Index/share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='share',`count`='6',`date`='2015 12 28',`des`=NULL WHERE `id` = 93 [ RunTime:0.2600s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0080s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451289048','2015-12-28','03:50:48 pm') [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` WHERE `status` NOT IN (2,4,5) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `status` NOT IN (2,4,5) ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-28T15:50:48+08:00 ] ::1 /passon/index.php/Home/Index/share?flag=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wind87_passoncount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_passoncount` WHERE `pagename` = 'share' AND `date` = '2015 12 28' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `wind87_passoncount` SET `pagename`='share',`count`='7',`date`='2015 12 28',`des`=NULL WHERE `id` = 93 [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `wind87_passonnums` [ RunTime:0.0040s ]
+SQL: INSERT INTO `wind87_passonnums` (`username`,`ip`,`pagename`,`timeseconds`,`date`,`time`) VALUES ('huran','0.0.0.0','share','1451289048','2015-12-28','03:50:48 pm') [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `wind87_book` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wind87_bookattention` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wind87_book` WHERE `status` NOT IN (2,4,5) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_book` WHERE `status` NOT IN (2,4,5) ORDER BY book_id DESC LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wind87_bookinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 37 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787213049422' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 36 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 35 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 34 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 33 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 32 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115281609' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 31 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787115334589' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 30 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wind87_bookinfo` WHERE `isbn` = '9787111380931' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wind87_bookattention` WHERE `book_id` = 29 AND `username` = 'huran' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 15 行.
+NOTIC: [8] Use of undefined constant squre - assumed 'squre' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 16 行.
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 17 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 20 行.
+NOTIC: [8] Use of undefined constant shareRegister - assumed 'shareRegister' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 43 行.
+NOTIC: [8] Use of undefined constant shareLogin - assumed 'shareLogin' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 44 行.
+NOTIC: [8] Use of undefined constant person - assumed 'person' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 47 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 56 行.
+NOTIC: [8] Use of undefined constant contribute - assumed 'contribute' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 167 行.
+NOTIC: [8] Use of undefined constant search - assumed 'search' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 195 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 205 行.
+NOTIC: [8] Use of undefined constant bookInfo - assumed 'bookInfo' D:\xampp\htdocs\passon\Application\Runtime\Cache\Home\b813aae94b2ddf4a4ed7e36f5c3a1a86.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

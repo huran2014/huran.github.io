@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size:16px;
+    font-family:Arial,Verdana,Geneva,sans-seri,Timeshiragino sans gb,microsoft yahei,simsun;/*改动*/
+    color:black;
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    height: 100px;
+    color: #000;
+    border-bottom: 1px solid black;
+}
+.title img{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.title-m{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 30px;
+    line-height: 60px;
+}
+.title-squre{
+    margin-left: 20px;
+}
+.title ul{
+    text-decoration: none;
+    list-style: none;
+    margin: -20px 30px;
+    float: right;
+}
+.title ul li{
+    display: inline;
+    border: 1px solid black;
+    margin-right: 20px;
+    padding: 3px 10px;
+}
+.register{
+    cursor: pointer;
+}
+.login{
+    cursor: pointer;
+}
+.div-search{
+    position: relative;
+    width:500px;
+    margin: -45px auto;
+}
+.search-a{
+
+}
+.search-a img{
+    z-index: 1;
+    margin-left: 487px;
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.search{
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    width: 500px;
+}
+.div-search span{
+    margin: 0 15px;
+    line-height: 40px;
+}
+.classify-title{
+    padding-left: 20px;
+    padding-top: 10px;
+}

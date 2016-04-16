@@ -1,0 +1,82 @@
+/* CSS Document */
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    width: 100%;
+    font-size:16px;
+    font-family:hiragino sans gb,microsoft yahei,simsun;/*改动*/
+    color:black;
+}
+.main{
+    width:80%;
+    margin: 0 auto;
+}
+.main-m{
+    width: 495px;
+    height:495px;
+    margin:200px auto;
+    /*background-color: antiquewhite;*/
+    box-shadow:0px 0px 2px black;
+}
+.title{
+    font-size: 24px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form{
+    position: absolute;
+    width: 495px;
+    margin: 10px 90px;
+
+}
+.font-size{
+    font-size: 16px;
+    margin-left: 40px;
+}
+.input{
+    width:250px;
+    height: 25px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.passwd{
+    margin-left: 3px;
+}
+.rpasswd{
+    margin-left: 3px;
+}
+.input1{
+    width:120px;
+}
+.btn-get{
+    padding: 3px 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-left:25px;
+}
+.btn{
+    padding: 7px 50px;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-left:100px;
+}
+.main-bottom{
+    width: 330px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top:1px solid black;
+}
+.no-user{
+    margin-left: 50px;
+}
+.register{
+    margin-left: 40px;
+    color: #0099FF;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size:16px;
+    font-family:Arial,Verdana,Geneva,sans-seri,Timeshiragino sans gb,microsoft yahei,simsun;/*改动*/
+    color:black;
+    background-color: #e9edf0;
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    height: 75px;
+    color: #fff;
+    background-color: #091835;
+    border-bottom: 1px solid black;
+}
+.title-left{
+    width: 30%;
+    margin-left: 1%;
+    padding-top: 8px;
+    /*float: left;*/
+}
+.title img{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.title-m{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 2%;
+    line-height: 60px;
+}
+.big{
+    font-size: 40px;
+    margin-left: 0;
+}
+/*修改过*/
+.title-top{
+    position: absolute;
+    font-size: 18px;
+    margin-top: -7px;
+    margin-left: 0;
+}
+/*修改过*/
+.title-bottom{
+    font-size: 14px;
+    margin-left: 0;
+}
+.title-squre{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 6%;
+}
+.title-squre a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-squre:hover{
+    /*text-decoration: underline;*/
+    cursor: pointer;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+}
+.title-main{
+    position: absolute;
+    margin-top: 20px;
+    margin-left:3%;
+}
+.title-main a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-main:hover{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.title-share{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 7%;
+}
+.title-share a{
+    color: #fff;
+    text-decoration: none;
+}
+.title-share:hover{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.title ul{
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 3% 0 0;
+    float: right;
+}
+.title ul li{
+    display: inline;
+    /*border: 1px solid black;*/
+    margin-right: 20px;
+    padding: 3px 10px;
+}
+.register{
+    cursor: pointer;
+}
+.register a{
+    color: #fff;
+    /*color: #000;*/
+    text-decoration: none;
+}
+.login{
+    cursor: pointer;
+}
+.login a{
+    /*color: #000;*/
+    color: #fff;
+    text-decoration: none;
+}
+.username-c{
+    padding: 27px 3% 0 0;
+    float: right;
+}
+.username-d{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.username-d a{
+    color: #fff;
+    text-decoration: none;
+}
+.div-search{
+    position: relative;
+    width:35%;
+    margin: -65px auto;
+}
+.search-a{
+    width: 100%;
+}
+.search-a input{
+    position: absolute;
+    z-index: 1;
+    margin-left: 97%;
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.search{
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+}
+.div-search span{
+    margin-left:  2.8%;
+    width: 25%;
+    font-size: 14px;
+    line-height: 22px;
+}
+.classify{
+    height: 60px;
+    background-color: #84ccc0;
+}
+.classify-title{
+    padding-left: 20px;
+    line-height: 60px;
+}
+.main{
+    width: 100%;
+    margin-bottom: 50px;
+    /*height: 600px;*/
+    /*border: 1px solid black;*/
+}
+.main-body{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.main-body p,img{
+    margin-bottom: 15px;
+}
+.main-body a{
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid  #84ccc0;
+}
+.conname input{
+    font-size: 18px;
+    padding: 5px 10px;
+}
+.current{
+    margin-left: 30px;
+}
+.change{
+    background-color: #091835;
+    padding: 3px 3px;
+    color: #fff;
+    cursor: pointer;
+}
+#con_name{
+    padding: 3px 0;
+}
+.detail span a{
+    cursor: pointer;
+}

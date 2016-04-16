@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    background-color: black;
+    height: 50px;
+}
+.title div{
+    width: 65px;
+    position: relative;
+    margin: 0 auto;
+}
+.title span{
+    color: #fff;
+    font-weight: 700;
+    line-height: 50px;
+}
+.main{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.main-title{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.main-title span{
+    font-size: 36px;
+
+}
+.main-form{
+    margin-top: 50px;
+}
+.book-input input{
+    width: 70%;
+    margin-bottom: 20px;
+    height: 26px;
+}
+.book-input{
+    width: 80%;
+    margin: 0 auto;
+}
+.book-input2{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.book-input2 input{
+    /*width: 40%;*/
+    padding: 5px 30px;
+}
+.footer{
+    margin-top: 50px;
+    border-top: 1px solid #BFBDBD;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.footer a{
+    color: #0099ff;
+}

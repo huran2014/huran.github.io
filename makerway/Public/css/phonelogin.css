@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    background-color: black;
+    height: 50px;
+}
+.title div{
+    width: 65px;
+    position: relative;
+    margin: 0 auto;
+}
+.title span{
+    color: #fff;
+    font-weight: 700;
+    line-height: 50px;
+}
+.main{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.book-message{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.book-message span{
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+}
+.main-img{
+    position: relative;
+    width: 40%;
+    height: 200px;
+    margin:50px auto 10px;
+    /*border: 1px solid black;*/
+}
+.main-img img{
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.book-title{
+    width: 100%;
+    /*display: block;*/
+    /*position: absolute;*/
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.book-info{
+    width: 100%;
+    /*display: block;*/
+    /*position: absolute;*/
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.book-login{
+    width: 100%;
+}
+.book-input input{
+    width: 70%;
+    margin-bottom: 20px;
+    height: 26px;
+}
+.book-input{
+    width: 80%;
+    margin: 0 auto;
+}
+.book-input2{
+    width: 100%;
+    text-align: center;
+    margin: 40px auto 0;
+}
+.book-input2 input{
+    /*width: 40%;*/
+    padding: 5px 30px;
+}
+.span1{
+    position: absolute;
+    right: 15%;
+}
+.span2{
+    position: absolute;
+    left: 13%;
+}
+.book-login span{
+    position: absolute;
+    /*right: 15%;*/
+}
+.book-login span a{
+    font-size: 14px;
+    color: #0066FF;
+}

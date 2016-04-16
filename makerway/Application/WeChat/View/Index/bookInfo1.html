@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+</head>
+<body>
+	<div>
+		<a href="{:U(bookcenter)}">首页</a>
+		<div>
+			<p>书名:<?php echo $s = iconv("UTF-8","GB2312",$bookin['title'])?></p>
+			<p>ISBN:{$book['isbn']}</p>
+			<p>作者:<?php echo $s = iconv("UTF-8","GB2312",$bookin['author'])?></p>
+			<p>出版社:<?php echo $s = iconv("UTF-8","GB2312",$bookin['publiser'])?></p>
+			<p>简介:<?php echo $s = iconv("UTF-8","GB2312",$bookin['summary'])?></p>
+			<img src="{$bookin['image']}"/>
+			<p>贡献者:<?php echo $s = iconv("UTF-8","GB2312",$book['owner_name'])?></p>
+			<p>贡献时间:{$book['contribute_time']}</p>
+			<p>保管者:<?php echo $s = iconv("UTF-8","GB2312",$book['keeper_name'])?></p>
+			<p>状态:{$book['status']}</p>
+			</br>
+		</div>
+		<img src="http://qr.liantu.com/api.php?text={$website}" alt="{$bookin['title']}的二维码"/>
+	</div>
+</body>
+</html>

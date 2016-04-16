@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>图书漂流</title>
+</head>
+<body>
+
+    <h2 style="text-align: center">图书漂流系统</h2>
+    <!--信息展示页，已绑定用户只进行此页面展示,初始进入展示页-->
+    <div class="msg" style="text-align: center;display: block">
+        <h4 style="text-align: left">欢迎您，<a href="http://www.makerway.space/Home/Book/userinfo.html?openid={$UserInfo.openid}">{$UserInfo.nickname}</a></h4>
+        <h3>您当前分享的书为：{$BookInfo.title}</h3>
+        <div align="center"><a href="http://www.makerway.space/Home/Book/bookinfo.html?ISBN={$BookInfo.isbn}&openid={$UserInfo.openid}"><img src="{$BookInfo.image}"></a></div>
+        <br>
+        <h4 style="text-align: left">信息确认</h4>
+        <div class="user_msg">
+            <div><span style="width:100px;text-align:center;">姓名 *</span><input type="text" readonly="readonly" name="username" value="{$username}" required maxlength="20" /></div>
+            <div><span style="width:100px;text-align:center;">电话 *</span><input type="text" readonly="readonly" name="phone" value="{$phone}" required maxlength="20" /></div>
+            <div><span style="width:100px;text-align:center;">地址 *</span><input type="text" readonly="readonly" name="addr" value="{$addr}" required maxlength="100" /></div>
+        </div>
+        <br>
+        <div>
+            <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="share_confirm" value="确认分享" id="Button1" class="share_confirm"></div>
+            <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="msg_modify" value="信息修改" id="Button2" class="msg_modify"></div>
+        </div>
+        <!--<h3>您可能感兴趣的书</h3>
+        <br>
+        <h4>您的分享记录</h4>-->
+    </div>
+    <!--分享-->
+    <!--注册页，当未进行绑定时出现-->
+    <div class="register" style="text-align: center;display: none">
+        <h4 style="text-align: left">报告！书本已经就绪！</h4>
+        <div class="user_register">
+            <div><span style="width:100px;text-align:center;">用户名 *</span><input type="text" name="user_name" value="" required maxlength="20" /></div>
+            <div><span style="width:100px;text-align:center;">密码 *</span><input type="text" name="user_password" value="6-16位,不能与用户名相同" required maxlength="20" /></div>
+            <div><span style="width:100px;text-align:center;">电话 *</span><input type="text" name="user_phone" value="6-16位，不能与用户名相同" required maxlength="100" /></div>
+            <div><span style="width:100px;text-align:center;">地址 *</span><input type="text" name="user_addr" value="请输入您的地址" required maxlength="100" /></div>
+        </div>
+        <div class="user_login">
+            <div><span style="width:100px;text-align:center;">用户名 *</span><input type="text" name="user_name" value="您的网站用户名" required maxlength="20" /></div>
+            <div><span style="width:100px;text-align:center;">密码 *</span><input type="text" name="user_password" value="您的网站密码" required maxlength="20" /></div>
+        </div>
+    </div>
+
+    <!--分享完毕展示页-->
+    <div class="share" style="text-align: center;display: none">
+        <h4 style="text-align: left"><a href="http://www.makerway.space/Home/Book/userinfo.html?openid={$UserInfo.openid}">{$UserInfo.nickname}</a>,感谢您的分享</h4>
+        <h4>您的分享记录</h4>
+        <div class="book_show">
+
+        </div>
+        <h4>您可能感兴趣的书</h4>
+        <div class="book_interest">
+
+        </div>
+    </div>
+
+    <!--判断展示页面-->
+    <input class="tip" type="hidden" name="tip" value="{$tip}">
+
+    <script src="__Public__/MakerWay/js/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function check_show(){
+            var tip = $("input[name=tip]").val();
+            //var tip = $(".tip").val();
+            //alert(tip);
+            /*if(tip==1){
+             $(".msg").hide();
+             $(".register").show();
+             }else{
+             $(".msg").show();
+             $(".register").hide();
+             }*/
+        }
+        function changeCode(){
+
+        }
+        /*DOM加载完毕执行函数*/
+        $(document).ready(function(){
+            check_show();
+
+            /*分享点击判断事件*/
+            $(".share_confirm").click(function(){
+                var username = $("input[name=username]").val();
+                var phone = $("input[name=phone]").val();
+                var addr = $("input[name=addr]").val();
+                if(username==''||phone==''||addr==''){
+                    alert('请先完善个人信息');
+                    window.location.href="{:U('register')}";
+                }else{
+                    alert('分享成功,感谢使用MakerWay分享图书，传递智慧');
+
+                }
+            });
+            /*信息修改事件*/
+            $(".msg_modify").click(function(){
+                var username = $("input[name=username]").val();
+                var phone = $("input[name=phone]").val();
+                var addr = $("input[name=addr]").val();
+                if(username==''||phone==''||addr==''){
+                    alert('请先完善个人信息');
+                    window.location.href="{:U('register')}";
+                }else{
+                    alert('分享成功,感谢使用MakerWay分享图书，传递智慧');
+                    window.location.href="{:U('msgModify')}";
+                }
+            });
+        })
+    </script>
+</body>
+</html>

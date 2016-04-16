@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>群组中心</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/groupMain.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="head">
+        <div class="title">
+            <div class="title-left">
+                <span class="title-m"><span class="big">M</span><span class="title-top">AKERWAY</span><span class="title-bottom">一起分享智慧</span></span>
+                <span class="title-main"><a href="{:U(index)}">首页</a></span>
+                <!--<span class="title-squre"><a href="{:U(squre)}">广场</a></span>-->
+                <span class="title-share"><a href="{:U(share)}">共享库</a></span>
+            </div>
+            <div class="div-search">
+                <form name="search" action="{:U(search)}" method="post">
+                    <input  class="search" name="search" type="text" placeholder="书名/分类？" />
+                    <div class="search-a">
+                        <input type="image" src="__PUBLIC__/images/search.png" name="img">
+                        <!--<input type="submit" value="submit"/>-->
+                        <!--<img src="__PUBLIC__/images/search.png"/>-->
+                    </div>
+                </form>
+                <span>热门搜索：</span>
+                    <span class="detail">
+                        <span><a>数据库系统概念</a></span>
+                        <span><a>CSS 3实战</a></span>
+                        <span><a>操作系统概念</a></span>
+                    </span>
+            </div>
+            <!--<span>-->
+            <!--<ul>-->
+            <!--<li>注册</li>-->
+            <!--<li>登录</li>-->
+            <!--</ul>-->
+            <!--</span>-->
+            <!--<span class="username-list">-->
+            <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li class="register"><a href="{:U(register)}">注册</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li class="login"><a href="{:U(login)}">登录</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+            <!--</span>-->
+            <span class="username-list">
+                    <ul>
+                        <li class="register"><a href="{:U(shareRegister)}">注册</a></li>
+                        <li class="login"><a href="{:U(shareLogin)}">登录</a></li>
+                    </ul>
+                </span>
+            <span class="username-c"><span class="username-d"><a href="{:U(person)}">{$_COOKIE['username']}的个人空间</a></span><span class="username-d"><a href="{:U(logout)}">注销</a></span></span>
+        </div>
+
+        <!--<div class="view"></div>-->
+    </div>
+    <div class="main">
+        <div class="classify">
+            <div class="classify-title"><a style="cursor: pointer;color:#000;text-decoration: none" href="{:U(index)}">MakerWay</a>>群组中心</div>
+        </div>
+        <div class="main-left">
+            <div class="main-left-person">
+                <div class="main-img">
+                    <img /><br/>
+                    <span class="username">{$result['name']}</span>
+                </div>
+                <div class="main-ul">
+                    <span>分类：{$result['classify']}</span>
+                    <span>创建时间：{$result['date']}</span>
+                    <span>共享书本：{$bookcount}</span>
+                    <span>成员：{$count}</span>
+                    <span>活动：2</span>
+                    <!--<ul>-->
+                        <!--<li>{$integral}<br/><br/>积分</li>-->
+                        <!--<li>分享达人<br/><br/>等级</li>-->
+                        <!--<li>{$booknum}本<br/><br/>分享数</li>-->
+                    <!--</ul>-->
+                    <div class="main-a"><a href="{:U(groupcontribute,array('groupid'=>$groupid))}"><input class="sharebtn" type="button" value="我要分享"/><input style="display: none" type="button" value="{$groupid}"/></a></div>
+                    <span>群组简介：{$result['summary']}</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="navigate">
+                <ul>
+                    <li class="border">动态</li>
+                    <li>账号信息</li>
+                    <li>书架</li>
+                    <li>组员</li>
+                    <!--<li>我的读书小组</li>-->
+                    <li>消息</li>
+                    <li>公告</li>
+                    <li>讨论区</li>
+                </ul>
+            </div>
+            <div class="subnavigate">
+                <div style="display: block">
+                    <ul style="height: 10px;clear: both;"></ul>
+                    <div class="my-pass">
+                        <div class="book_life_experience_p">
+                            <section id="cd-timeline" class="cd-container">
+                                <div class="cd-timeline-block">
+                                    <div class="cd-timeline-img cd-picture">
+                                        <img src="__PUBLIC__/images/logo.png" alt="Picture">
+                                    </div>
+
+                                    <div class="cd-timeline-content">
+                                        <h2>未来会发生什么呢</h2>
+                                        <p>值得我期待</p>
+                                        <span class="cd-date">future</span>
+                                    </div>
+                                </div>
+                                <?php if ($booklog): ?>
+                                <?php foreach ($booklog as $item): ?>
+                                <?php if ($item['status']==2): ?>
+                                <div class="cd-timeline-block">
+                                    <div class="cd-timeline-img cd-picture">
+                                        <img src="__PUBLIC__/images/logo.png" alt="Picture">
+                                    </div>
+
+                                    <div class="cd-timeline-content">
+                                        <h2>借</h2>
+                                        <p><span class='keeper' >我</span>借走了《{$item['booklog']['title']}》</p>
+                                        <p>将在<span class="keeper">{$item['end_time']}</span>还书</p>
+                                        <span class="cd-date">{$item['start_time']}</span>
+                                    </div>
+                                </div>
+                                <?php elseif ($item['status']==4): ?>
+                                <div class="cd-timeline-block">
+                                    <div class="cd-timeline-img cd-picture">
+                                        <img src="__PUBLIC__/images/logo.png" alt="Picture">
+                                    </div>
+
+                                    <div class="cd-timeline-content">
+                                        <h2>预</h2>
+                                        <p><span class='keeper' >我</span>预约了《{$item['booklog']['title']}》</p>
+                                        <span class="cd-date">{$item['start_time']}</span>
+                                    </div>
+                                </div>
+                                <?php elseif ($item['status']==5): ?>
+                                <div class="cd-timeline-block">
+                                    <div class="cd-timeline-img cd-picture">
+                                        <img src="__PUBLIC__/images/logo.png" alt="Picture">
+                                    </div>
+
+                                    <div class="cd-timeline-content">
+                                        <h2>续</h2>
+                                        <p><span class='keeper' >我</span>续借了《{$item['booklog']['title']}》</p>
+                                        <p>将在<span class='keeper' >{$item['end_time']}</span>还书</p>
+                                        <span class="cd-date">{$item['start_time']}</span>
+                                    </div>
+                                </div>
+                                <?php elseif ($item['status']==3): ?>
+                                <div class="cd-timeline-block">
+                                    <div class="cd-timeline-img cd-picture">
+                                        <img src="__PUBLIC__/images/logo.png" alt="Picture">
+                                    </div>
+
+                                    <div class="cd-timeline-content">
+                                        <h2>还</h2>
+                                        <p><span class='keeper' >我</span>归还了《{$item['booklog']['title']}》</p>
+                                        <span class="cd-date">{$item['end_time']}</span>
+                                    </div>
+                                </div>
+                                <?php endif ?>
+                                <?php endforeach ?>
+                                <?php endif ?>
+                                <div class="cd-timeline-block">
+                                    <div class="cd-timeline-img cd-picture">
+                                        <img src="__PUBLIC__/images/logo.png" alt="Picture">
+                                    </div>
+                                    <div class="cd-timeline-content">
+                                        <h2>我</h2>
+                                        <p>来到了Makerway这个奇幻漂流世界</p>
+                                        <p>可以尽情畅游书海</p>
+                                        <span class="cd-date">{$book['contribute_time']}</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="message"  style="display: none;">
+                    <ul>
+                        <li class="activecolor">基本资料</li>
+                        <li>联系方式</li>
+                        <!--<li>密码安全</li>-->
+                        <li>修改头像</li>
+                    </ul>
+                    <div class="second-navigate">
+                        <div class="second-message" style="display: block;">
+                            <form class="messageform">
+                                <div class="label-m"><label class="label-left">群组名字：</label>{$result['name']}</div><br/>
+                                <div class="label-m"><label class="label-left">分类：</label>{$result['classify']}
+                                    <!--<select id="lab-belong" class="lab-belong">-->
+                                        <!--<option>请选择</option>-->
+                                        <!--<option>信息与通信工程学院</option>-->
+                                        <!--<option>电子工程学院</option>-->
+                                        <!--<option>计算机学院</option>-->
+                                        <!--<option>自动化学院</option>-->
+                                        <!--<option>经济管理学院</option>-->
+                                        <!--<option>理学院</option>-->
+                                        <!--<option>软件学院</option>-->
+                                        <!--<option>人文学院</option>-->
+                                        <!--<option>数字媒体与设计艺术学院</option>-->
+                                        <!--<option>公共管理学院</option>-->
+                                        <!--<option>国际学院</option>-->
+                                    <!--</select>-->
+                                </div><br/>
+                                <div class="label-m"><label class="label-left">群组简介：</label>
+                                    {$result['summary']}
+                                </div><br/>
+                                <!--<input class="savemessage" type="submit" value="保存资料"/>-->
+                            </form>
+                        </div>
+                        <div style="display: none;">
+                            <div class="messageform2">
+                                <div class="span-s">已存电话：<span class="adress">{$result['phone']}</span><input class="change-message1" type="button" value="修改"/></div><br/>
+                                <div class="span-s">已存邮箱：<span class="adress">{$result['email']}</span><input class="change-message2" type="button" value="修改"/></div><br/>
+                                <div class="span-s">已存地址：<span class="adress">{$result['address']}</span><input class="change-message3" type="button" value="修改"/></div><br/>
+                                <!--<div class="span-c"><input class="change-message" type="button" value="修改"/></div>-->
+                            </div>
+                            <form class="messageform31" action="{:U(usmessage1)}" method="post">
+                                <!--<div class="label-m"><label>联系姓名：</label><input class="username-in"/></div><br/>-->
+                                <div class="span-s">联系电话：<input name="phonenum" class="username-in"/></div><br/>
+                                <!--<div class="span-s">生&nbsp;&nbsp;&nbsp;&nbsp;日：<input type="radio"/>保密 <input type="radio"/>男 <input type="radio"/>女</div><br/>-->
+                                <input class="savemessage" type="submit" value="保存资料"/>
+                            </form>
+                            <form class="messageform32" action="{:U(usmessage2)}" method="post">
+                                <!--<div class="label-m"><label>联系姓名：</label><input class="username-in"/></div><br/>-->
+                                <div class="span-s">联系邮箱：<input name="email" class="username-in"/></div><br/>
+                                <!--<div class="span-s">生&nbsp;&nbsp;&nbsp;&nbsp;日：<input type="radio"/>保密 <input type="radio"/>男 <input type="radio"/>女</div><br/>-->
+                                <input class="savemessage" type="submit" value="保存资料"/>
+                            </form>
+                            <form class="messageform33" action="{:U(usmessage3)}" method="post">
+                                <!--<div class="label-m"><label>联系姓名：</label><input class="username-in"/></div><br/>-->
+                                <div class="span-s">联系地址：<input name="addr" class="username-in"/></div><br/>
+                                <!--<div class="span-s">生&nbsp;&nbsp;&nbsp;&nbsp;日：<input type="radio"/>保密 <input type="radio"/>男 <input type="radio"/>女</div><br/>-->
+                                <input class="savemessage" type="submit" value="保存资料"/>
+                            </form>
+                        </div>
+                        <div style="display: none;">
+                            <form class="messageform1">
+                                <div class="label-m label-float">
+                                    <img class="file-img" src="" />
+                                </div><br/>
+                                <div class="label-m marginleft">
+                                    <div class="choose-img">
+                                        <input class="file" type="file" value="选择图片" />
+                                    </div>
+                                </div><br/>
+                                <div class="label-m marginleft">
+                                    <label>说明：</label><br/>
+                                    <label>1、支持JPG、JPEG、GIF、PNG文件格式。</label><br/>
+                                    <label>2、GIF帧数过高会造成您电脑运行缓慢。</label><br/>
+                                </div><br/>
+                                <!--<div class="span-s">生&nbsp;&nbsp;&nbsp;&nbsp;日：<input type="radio"/>保密 <input type="radio"/>男 <input type="radio"/>女</div><br/>-->
+                                <input class="savemessage" type="button" value="保存资料"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none;">
+                    <ul class="bookmessage">
+                        <li class="activecolor">共享书籍</li>
+                        <li>逾期书籍</li>
+                    </ul>
+                    <div class="mybook" >
+                        <div class="submybook" style="display: block;">
+                            <ul>
+                                <foreach name='mybooks' item='item'>
+                                    <li>
+                                        <div class="main-body-li">
+                                            <div onclick="document.location='{:U(bookInfo,array('bookid'=>$item['book_id']))}'" style="cursor:pointer">
+                                                <img src="{$item['bookinfo']['image']}"/>
+                                                <span class="name">《<?php echo $item['bookinfo']['title']?>》</span>
+                                                <span class="author">标签：{$item['bookinfo']['tags']}</span>
+                                                <span class="favour">创建时间：{$item['contribute_time']}</span>
+                                                <span class="comment">书本状态：<?php if($item['status']==1) echo '可借阅'; if($item['status']==2) echo '已借出';if($item['status']==3) echo '可借阅';if($item['status']==4) echo '可预约';if($item['status']==5) echo '可预约'?></span>
+                                            </div>
+                                            <div style="text-align: center;margin-top: -20px;">
+                                                <input type="button" value="打印二维码"  style="cursor:pointer" onclick="javascript:window.open('{:U(qr,array('book_id'=>$item['book_id']))}')"/>
+                                                <input class="recall" type="button" value="收回本书"  style="cursor:pointer;margin-left: 10%"/>
+                                            </div>
+                                        </div>
+                                        <div class="main-tan"></div>
+                                        <div class="tan-message">
+                                            <div>
+                                                <p>现在我在 {$item['groupmessage']['name']} 那儿</p>
+                                                <p>联系方式： {$item['groupmessage']['phone']}</p>
+                                                <p>常在地址： {$item['groupmessage']['address']}</p>
+                                                <p>请记录好联系人相关信息，点击确认后将删除关于书本的相关信息，您是否确定？</p>
+                                                <input class="tan-button" type="button" value="确定" onclick="document.location='{:U(groupdeleteBook,array('book_id'=>$item['book_id'],'groupid'=>$groupid))}'"/>
+                                                <input class="tan-button1" type="button" value="取消"/>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </foreach>
+                                <span class="fenpage">{$page}</span>
+                                <!--<li>-->
+                                    <!--<div class="main-body-li">-->
+                                        <!--<img src=""/>-->
+                                        <!--<span class="name">书名1：<?php echo $item['bookinfo']['title']?></span>-->
+                                        <!--<span class="author">类别：</span>-->
+                                        <!--<span class="favour">创建时间：</span>-->
+                                        <!--<span class="comment">书本状态：</span>-->
+                                        <!--<input type="button" value="借阅历史" onclick="document.location='{:U(bookInfo,array('bookid'=>$item['book_id']))}'" style="cursor:pointer"/>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            </ul>
+                        </div>
+                        <div class="submybook" style="display: none;">
+                            <ul style="height: 10px;clear: both;"></ul>
+                            <div class="my-pass"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booktags" style="display: none;">
+                    <ul>
+                        <li class="activecolor">组员列表</li>
+                        <li>组员动态</li>
+                    </ul>
+                    <div class="tags">
+                        <div style="display: block">
+                            <ul style="height: 10px;clear: both;"></ul>
+                            <div class="my-pass group-member">
+                                <span>组员数：{$count}</span>
+                                <ul>
+                                    <foreach name="resultmember" item="item">
+                                        <li>
+                                            <img src="__PUBLIC__/images/basketball.jpg"/>
+                                            <span>{$item['username']}</span>
+                                        </li>
+                                    </foreach>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="display: none">
+                            <ul style="height: 10px;clear: both;"></ul>
+                            <div class="my-pass"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-message" style="display: none">
+                    <ul style="height: 10px;clear: both;">
+                        <li class="activecolor">请求</li>
+                        <li>通知</li>
+                    </ul>
+                    <div class="grouptags">
+                        <div style="display: block">
+                            <ul style="height: 10px;clear: both;"></ul>
+                            <div class="group-pass my-pass">
+                                <ul>
+                                    <foreach name="applymessage" item="item">
+                                        <li>
+                                            <div class="group-pass-left">
+                                                <img src="__PUBLIC__/images/basketball.jpg"/>
+                                                <span class="group-pass-name">{$item['username']}</span>
+                                                <span class="group-pass-request">请求加入群组</span>
+                                            </div>
+                                            <div class="group-pass-right">
+                                                <input class="agree" type="button" value="同意"/>
+                                                <a class="disagree">忽略</a>
+                                                <input style="display: none" value="{$groupid}"/>
+                                                <input style="display: none" value="{$item['username']}"/>
+                                            </div>
+                                            <div class="group-pass-right" style="display: none">
+                                                <input class="agree" type="button" value="已同意"/>
+                                            </div>
+                                            <div class="group-pass-right" style="display: none">
+                                                <a class="disagree">已忽略</a>
+                                            </div>
+                                        </li>
+                                    </foreach>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="display: none">
+                            <ul style="height: 10px;clear: both;"></ul>
+                            <div class="my-pass"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none">
+                    <ul style="height: 10px;clear: both;"></ul>
+                    <div class="my-pass group-notice">
+                        <div class="notice-title">
+                            <ul>
+                                <li class="backgroundColor2">全部</li>
+                                <li class="backgroundColor1">热门</li>
+                            </ul>
+                            <span>发起活动</span>
+                        </div>
+                        <div class="notice-body">
+                            <div>
+                                <div>
+                                    <ul style="display: block">
+                                        <li class="notice-body-first">
+                                    <span class="notice-body-left">
+                                        <span>排序：</span>
+                                        <span class="font-cursor font-color">最新发帖</span>
+                                        <span class="font-cursor">最后发帖</span>
+                                    </span>
+                                    <span class="notice-body-right">
+                                        <span>最后发表</span>
+                                        <span>回复</span>
+                                        <span>作者</span>
+                                    </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="">
+                                    <ul>
+                                        <li class="notice-number">
+                                            <ul>
+                                                <li class="notice-content" style="display: block">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">1/100</span>
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                                <li class="notice-content">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">1/100</span>
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="notice-number" style="display: none">
+                                            <ul>
+                                                <li class="notice-content">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">2/100</span>
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                                <li class="notice-content">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">2/100</span>
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="display: none">
+                                <div>
+                                    <ul style="display: block">
+                                        <li class="notice-body-first">
+                                    <span class="notice-body-left">
+                                        <span>排序：</span>
+                                        <span class="font-cursor font-color">最新发帖</span>
+                                        <span class="font-cursor">最后发帖</span>
+                                    </span>
+                                    <span class="notice-body-right">
+                                        <span>最后发表</span>
+                                        <span>回复</span>
+                                        <span>作者</span>
+                                    </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li class="notice-number">
+                                            <ul>
+                                                <li class="notice-content" style="display: block">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">3/100</span>
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                                <li class="notice-content">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">3/100</span>
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="notice-number" style="display: none">
+                                            <ul>
+                                                <li class="notice-content">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">4/100</span>
+                                                 <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                                <li class="notice-content">
+                                                    <span style="line-height: 37px;">【公告】</span>
+                                                    <span>关于本小组第一次线下读书活动</span>
+                                            <span class="notice-body-right">
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                                <span style="line-height: 37px;">4/100</span>
+                                                <span>
+                                                    <span>NewCZ</span><br/>
+                                                    <span class="notice-content-date">2015-10-31</span>
+                                                </span>
+                                            </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none">
+                    <ul style="height: 10px;clear: both;"></ul>
+                    <div class="my-pass"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-68503572-4', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/group.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/groupmain.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/labelsearch.js"></script>
+<script>
+    var allcookies = document.cookie;
+    function getCookie(cookie_name)
+    {
+        var allcookies = document.cookie;
+        var cookie_pos = allcookies.indexOf(cookie_name);   //索引的长度
+        if (cookie_pos != -1)
+        {
+// 把cookie_pos放在值的开始，只要给值加1即可。
+            cookie_pos += cookie_name.length + 1;      //这里我自己试过，容易出问题，所以请大家参考的时候自己好好研究一下。。。
+            var cookie_end = allcookies.indexOf(";", cookie_pos);
+            if (cookie_end == -1)
+            {
+                cookie_end = allcookies.length;
+            }
+            var value = unescape(allcookies.substring(cookie_pos, cookie_end)); //这里就可以得到你想要的cookie的值了。。。
+        }
+        return value;
+    }
+    var cookie_val = getCookie("username");
+    if(cookie_val){
+        $(".username-list").hide();
+        $(".username-c").show();
+
+    }else{
+        $(".username-list").show();
+        $(".username-c").hide();
+    }
+</script>
+</html>

@@ -1,0 +1,12 @@
+[ 2015-12-22T20:36:54+08:00 ] ::1 /passon/Public/css/__PUBLIC__/images/footer.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2015-12-22T20:46:11+08:00 ] ::1 /passon/Public/css/images/footer.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+

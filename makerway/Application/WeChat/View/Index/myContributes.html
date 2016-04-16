@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+</head>
+<body>
+	<div>
+		<a href="{:U(bookcenter)}">首页</a>
+		<foreach name='mybooks' item='item'>
+			<div onclick="document.location='{:U(bookInfo,array('bookid'=>$item['book_id']))}'" style="cursor:pointer">
+				<p>书名:<?php echo $s = iconv("UTF-8","GB2312",$item['bookinfo']['title'])?></p>
+				<p>ISBN:{$item['isbn']}</p>
+				<img src="{$item['bookinfo']['image']}">
+				<p>贡献者:{$item['owner_name']}____
+				保管者:{$item['keeper_name']}____
+				状态:{$item['status']}</p>
+				<p>贡献时间:{$item['contribute_time']}</p>
+				</br>
+			</div>
+		</foreach>
+		
+	</div>
+</body>
+</html>

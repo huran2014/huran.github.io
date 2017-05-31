@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>每日一签 签签有礼</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="shortcut icon" href="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+    <link rel="stylesheet" type="text/css" href="../../css/conf/index-m.css">
+</head>
+<body>
+    <app-layout id="page-sign">
+        <app-user slot="user"></app-user>
+        <app-task slot="task"></app-task>
+        <app-ad slot="advertisement"></app-ad>
+        <app-hero slot="hero"></app-hero>
+        <router-view name="sign" slot="sign"></router-view>
+        <router-view name="signSuccess" slot="signSuccess"></router-view>
+        <router-view name="signCalendar" slot="signCalendar"></router-view>
+    </app-layout>
+
+    <script type="text/javascript" src="//jstatic.letvcdn.com/sdk/passport.js"></script>
+    <script type="text/javascript" src="../../js/lithe.js" data-config="config.js"></script>
+    <script type="text/javascript">
+        window.lithe.use("conf/index-m.js");
+    </script>
+</body>
+</html>

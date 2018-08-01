@@ -3,13 +3,10 @@ import qs from 'qs';
 
 export default function $axios(options) {
     return new Promise((resolve, reject) => {
-        // const instance = axios.create({
-        //     headers: {},
-        //     transformResponse: [function(data) {}]
-        // });
+        const instance = axios.create();
 
         // request 拦截器
-        axios.interceptors.request.use(
+        instance.interceptors.request.use(
             config => {
                 // Tip: 1
                 // 请求开始的时候可以结合 vuex 开启全屏的 loading 动画
@@ -59,12 +56,12 @@ export default function $axios(options) {
         );
 
         // response 拦截器
-        axios.interceptors.response.use(
+        instance.interceptors.response.use(
             response => {
                 let data;
                 // IE9时response.data是undefined，因此需要使用response.request.responseText(Stringify后的字符串)
-                if (response.data == 'undefined') {
-                    data = response.request.responseText;
+                if (response.data == undefined) {
+                    data = JSON.parse(response.request.responseText);
                 } else {
                     data = response.data;
                 }
@@ -141,7 +138,7 @@ export default function $axios(options) {
         );
 
         //请求处理
-        axios(options)
+        instance(options)
             .then((res) => {
                 resolve(res);
                 return false;
